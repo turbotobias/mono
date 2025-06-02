@@ -1,16 +1,16 @@
-Draft for faster typescript lookup without pre-bundling
+Draft for faster typescript lookup in a monorepo without pre-bundling
 
-Because it's hard to read when it takes seconds to read what you're looking at
+Because it's hard to read code when it takes seconds to see the word you're looking at
 
 **Goals**
-- fastest type lookup
-- optimal builds
-- reliably (that is, javascript reliable)
+1. optimal builds
+2. fastest type lookup
+3. reliably (that is, javascript reliable)
 
-**Maybe**
+**Code organisation**
 
-- `/sources` never bundle (only emits .d.ts for outputs)
-- `/outputs` always bundle (directly from sources)
+- `/sources` projects that never bundle (only emits .d.ts for outputs)
+- `/outputs` projects that always bundle (directly from sources)
 
 **Why**
 
@@ -60,12 +60,12 @@ now.
     ...
 ```
 
-Without increasing bundle size or hurting performance
+Without increasing bundle size or hurting performance, in a large but not super large codebase (6 figure LOC)
 
 **Problems with this approach**
 
-- Phantom errors from any tiny tsconfig mistake → should error on misconfig?
-- Not reliable across bundlers → each bundler needs explicit support?
+- Phantom errors from any misconfig of tsconfig → error on misconfig (?)
+- Not reliable across bundlers → explicit support
 
 **Verify if improvements are significant**
 - 🟡 type-check time
