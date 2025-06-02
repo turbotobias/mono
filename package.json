@@ -1,21 +1,25 @@
 {
-  "name": "pretty-good-source-performance-and-output-bundle-size",
-  "version": "1.0.0",
-  "description": "",
-  "workspaces": [
-    "sources/*",
-    "outputs/*"
-  ],
+  "name": "mono",
   "scripts": {
-    "clone": "bun clone-package.ts",
-    "clone:clean": "bun clone-package.ts --clean",
+    "build": "update-ts-references && tsc -b --extendedDiagnostics",
     "postinstall": "update-ts-references"
   },
   "engines": {
     "node": "22.16.0",
     "bun": ">=1.2.15 <2"
   },
+  "workspaces": {
+    "packages": [
+      "sources/*",
+      "outputs/*"
+    ],
+    "catalog": {
+      "typescript": "^5.8.3"
+    }
+  },
   "devDependencies": {
     "update-ts-references": "^3.6.0"
-  }
+  },
+  "version": "1.0.0",
+  "description": ""
 }

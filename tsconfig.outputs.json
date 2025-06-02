@@ -4,7 +4,7 @@
     "lib": [
       "ESNext"
     ],
-    "target": "ESNext",
+    "target": "es2024",
     "module": "ESNext",
     "moduleDetection": "force",
     "moduleResolution": "bundler",

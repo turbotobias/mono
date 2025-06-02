@@ -1,6 +1,5 @@
 {
   "files": [],
-  "exclude": [],
   "references": [
     {
       "path": "sources/package-a"
@@ -11,6 +10,5 @@
     {
       "path": "outputs/app-1"
     }
-  ],
-  "compilerOptions": {}
+  ]
 }
