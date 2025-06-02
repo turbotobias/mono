@@ -1,17 +1,17 @@
 {
-  "name": "test-mono",
+  "name": "pretty-good-source-performance-and-output-bundle-size",
   "version": "1.0.0",
-  "description": "Monorepo test project with package cloning capabilities",
+  "description": "",
+	"workspaces": [
+		"sources/*",
+		"outputs/*"
+	],
   "scripts": {
     "clone": "bun clone-package.ts",
-    "clean-clones": "bun clone-package.ts --clean",
-    "test": "bun test",
-    "test:clone": "bun test clone-package.test.ts"
+    "clone:clean": "bun clone-package.ts --clean"
   },
-  "devDependencies": {
-    "bun-types": "^1.2.15"
-  },
-  "engines": {
-    "bun": ">=1.0.0"
-  }
+	"engines": {
+		"node": "22.16.0",
+		"bun": ">=1.2.15 <2"
+	}
 }

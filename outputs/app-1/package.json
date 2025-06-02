@@ -1,0 +1,15 @@
+{
+  "name": "@/app-1",
+  "main": "./src/index.ts",
+  "scripts": {
+    "dev": "bunup src/index.ts --watch",
+    "build": "bunup src/index.ts"
+  },
+  "dependencies": {
+    "@/a": "workspace:*",
+    "@/b": "workspace:*"
+  },
+  "devDependencies": {
+    "bunup": "^0.8.23"
+  }
+}

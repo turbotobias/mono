@@ -1,0 +1,15 @@
+{
+  "files": [],
+  "exclude": [],
+  "references": [
+    {
+      "path": "./outputs/app-1",
+    },
+    {
+      "path": "./sources/package-a",
+    },
+    {
+      "path": "./sources/package-b",
+    },
+  ]
+}

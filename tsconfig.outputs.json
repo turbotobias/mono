@@ -1,26 +1,26 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "composite": false,
-    "declaration": true,
-    "declarationMap": false,
-    "emitDeclarationOnly": true,
-    "incremental": true,
-    "isolatedModules": false,
-    "isolatedDeclarations": true,
     "lib": [
       "ESNext"
     ],
+    "target": "ESNext",
     "module": "ESNext",
     "moduleDetection": "force",
     "moduleResolution": "bundler",
-    "noEmit": true,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+    "incremental": true,
+    "isolatedModules": true,
+    "isolatedDeclarations": true,
+    "noEmit": false,
     "noEmitOnError": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "ESNext",
     "verbatimModuleSyntax": true
   }
 }
