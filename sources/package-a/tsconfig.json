@@ -6,7 +6,7 @@
   },
   "references": [
     {
-      "path": "../package-b"
+      "path": "../package-c"
     }
   ]
 }

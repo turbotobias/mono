@@ -1,5 +1,5 @@
-import { test_b } from "@/b"
+import { test_c } from "@/c"
 
-test_b()
+test_c()
 
-export const test_a = (): void => console.log("from package-b!")
+export const test_a = (): void => console.log("from package-a!")

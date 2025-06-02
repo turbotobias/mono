@@ -2,16 +2,20 @@
   "name": "pretty-good-source-performance-and-output-bundle-size",
   "version": "1.0.0",
   "description": "",
-	"workspaces": [
-		"sources/*",
-		"outputs/*"
-	],
+  "workspaces": [
+    "sources/*",
+    "outputs/*"
+  ],
   "scripts": {
     "clone": "bun clone-package.ts",
-    "clone:clean": "bun clone-package.ts --clean"
+    "clone:clean": "bun clone-package.ts --clean",
+    "postinstall": "update-ts-references"
   },
-	"engines": {
-		"node": "22.16.0",
-		"bun": ">=1.2.15 <2"
-	}
+  "engines": {
+    "node": "22.16.0",
+    "bun": ">=1.2.15 <2"
+  },
+  "devDependencies": {
+    "update-ts-references": "^3.6.0"
+  }
 }

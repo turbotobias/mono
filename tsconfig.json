@@ -3,13 +3,14 @@
   "exclude": [],
   "references": [
     {
-      "path": "./outputs/app-1",
+      "path": "sources/package-a"
     },
     {
-      "path": "./sources/package-a",
+      "path": "sources/package-c"
     },
     {
-      "path": "./sources/package-b",
-    },
-  ]
+      "path": "outputs/app-1"
+    }
+  ],
+  "compilerOptions": {}
 }
