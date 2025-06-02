@@ -1,0 +1,17 @@
+{
+  "name": "test-mono",
+  "version": "1.0.0",
+  "description": "Monorepo test project with package cloning capabilities",
+  "scripts": {
+    "clone": "bun clone-package.ts",
+    "clean-clones": "bun clone-package.ts --clean",
+    "test": "bun test",
+    "test:clone": "bun test clone-package.test.ts"
+  },
+  "devDependencies": {
+    "bun-types": "^1.2.15"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  }
+}

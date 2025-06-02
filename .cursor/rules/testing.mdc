@@ -1,0 +1,34 @@
+---
+description: rules for how to test
+globs:
+alwaysApply: true
+---
+# Test-Driven Development Rules
+
+## Development Workflow
+- Unit test every function's possible input/output by default
+- Write tests first, then the code, then run the tests and update the code until tests pass
+- Place tests as siblings to the file being tested, with identical names (e.g., `convert.ts` should have a test file called `convert.test.ts` that tests all use cases of `convert.ts`)
+- Prefer adding new tests to existing test files if the code already has a test file
+- Skip testing databases or integrations unless explicitly asked
+
+## Technology Stack
+- Exclusively use Bun for tests and file APIs
+- Use `./bunfig.toml` and other Bun test configuration like `setup.ts` to configure testing across test cases
+- Avoid Node.js entirely unless Bun lacks support
+- Use Bun APIs like `bun`, `bun test`, `bunx`, etc. exclusively (not `node`, `npx`, `pnpx`)
+  - **Note**: Remember that the tested code itself is *not* Bun-specific (it should work in Node.js or browser environments)
+
+## Testing Utilities
+- Use Bun testing utilities: `import { describe, expect, it } from "bun:test"`
+- Place tests alongside the file being tested
+  - Example: `convert.ts` → `convert.test.ts`
+
+## Test Coverage Requirements
+- Each test must cover:
+  - The core feature functionality
+  - Every conceivable edge case that might occur from the unit of code being tested in isolation
+  - **Scope**: Only test edge cases from your own code, not external dependencies
+
+
+

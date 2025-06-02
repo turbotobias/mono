@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "lib": [
+      "ESNext"
+    ],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    // TODO: change to true when we have multiple packages
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true, //
+    "incremental": true,
+    // faster type compilation (need to verify)
+    "isolatedModules": true,
+    "isolatedDeclarations": true,
+    // only emit .d.ts files, not .js files (apps will use the .d.ts files during development and outputs will bundle directly from sources)
+    "noEmit": false,
+    "noEmitOnError": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    // for debugging (apps will not use pre-bundled .js files from sources)
+    "sourceMap": true,
+    "strict": true,
+    "verbatimModuleSyntax": true
+  }
+}
