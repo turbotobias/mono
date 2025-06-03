@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@types/bun": "^1.2.15",
+    "bunup": "^0.8.25",
     "update-ts-references": "^3.6.0"
   },
   "version": "1.0.0",

@@ -5,10 +5,14 @@
       "path": "sources/package-a"
     },
     {
+      "path": "sources/package-b"
+    },
+    {
       "path": "sources/package-c"
     },
     {
       "path": "outputs/app-1"
     }
-  ]
+  ],
+  "compilerOptions": {}
 }
