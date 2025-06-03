@@ -1,7 +1,12 @@
 {
-  "extends": "../../tsconfig.sources.json",
+  "extends": "@/config-tsconfig/sources",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src"
-  }
+  },
+  "references": [
+    {
+      "path": "../../internals/config-tsconfig"
+    }
+  ]
 }
