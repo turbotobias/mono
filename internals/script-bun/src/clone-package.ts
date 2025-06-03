@@ -1,16 +1,12 @@
 #!/usr/bin/env bun
 
-import { existsSync, cpSync, rmSync, readdirSync } from "fs";
-import { join } from "path";
-import { $ } from "bun";
+import { existsSync, readdirSync, rmSync } from "node:fs";
+import { join } from "node:path";
 
 const SOURCE_DIR = "sources/package-a";
 const SOURCES_DIR = "sources";
 const CLONE_PREFIX = "package-a-clone-";
 
-/**
- * Parse command line arguments
- */
 function parseArguments(args: string[]) {
   const cleanFlags = ["-c", "--clean"];
   const hasCleanFlag = args.some(arg => cleanFlags.includes(arg));
@@ -115,11 +111,7 @@ async function createClones(count: number): Promise<void> {
       }
 
       // Copy the source directory
-      cpSync(SOURCE_DIR, clonePath, {
-        recursive: true,
-        force: true,
-        preserveTimestamps: true
-      });
+      await Bun.write(clonePath, await Bun.file(SOURCE_DIR).arrayBuffer());
 
       console.log(`Created: ${clonePath}`);
     } catch (error) {

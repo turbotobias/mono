@@ -14,13 +14,12 @@ Draft for a typescript monorepo with bun, vite+rolldown, cloudflare
 Code organization
 
  `/sources/`
-  - Contains any source code (utilities, libraries, primitives, etc.).
-  - Never bundled directly; only emits .d.ts files for outputs during development.
+  - any source code (utilities, libraries, primitives, etc.).
+  - never bundled
 
  `/outputs/`
-  - Contains any to-be-shipped code (web, native, CLI, etc.).
-  - Always bundles directly from sources.
-  - User-facing bundles are built here.
+  - any to-be-shipped code (web, native, cli, etc.).
+  - bundles directly from sources
 
 ----
 
@@ -28,4 +27,4 @@ Code organization
 - configs, scripts, etc.
 
 `/deploys` (maybe)
-- to more easily replicate outputs (apps) across different production environments
+- to easily replicate apps across prods
