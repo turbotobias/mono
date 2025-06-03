@@ -11,7 +11,6 @@
     "@/a": "workspace:*",
     "@/b": "workspace:*",
     "@/c": "workspace:*",
-    "@/config-vite": "workspace:*",
     "@/config-tsconfig": "workspace:*",
     "vite": "catalog:"
   }

@@ -3,7 +3,6 @@
   "scripts": {
     "dev": "update-ts-references && tsc -b --extendedDiagnostics",
     "build:bunup": "bunup && update-ts-references && tsc --extendedDiagnostics",
-    "build:vite": " && update-ts-references && tsc --extendedDiagnostics",
     "postinstall": "update-ts-references"
   },
   "engines": {
@@ -20,17 +19,14 @@
       "@types/bun": "^1.2.15",
       "bunup": "^0.8.25",
       "typescript": "^5.8.3",
-      "vite": "npm:rolldown-vite@latest"
+      "vite": "^6.3.5"
     }
   },
   "devDependencies": {
     "@/config-bunup": "workspace:*",
-    "@/config-vite": "workspace:*",
     "@/script-bun": "workspace:*",
     "update-ts-references": "^3.6.0"
   },
-  "overrides": {
-    "vite": "npm:rolldown-vite@latest"
-  },
+
   "version": "0.0.0"
 }
