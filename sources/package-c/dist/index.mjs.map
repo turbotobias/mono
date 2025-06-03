@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts"],
+  "sourcesContent": [
+    "\nexport const test_c = (): void => console.log(\"from package-c!\")\n"
+  ],
+  "mappings": ";AACO,IAAM,SAAS,MAAY,QAAQ,IAAI,iBAAiB;",
+  "debugId": "62D0EC4710AAE2C064756E2164756E21",
+  "names": []
+}

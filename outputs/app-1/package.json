@@ -6,9 +6,8 @@
     "build": "bunup src/index.ts"
   },
   "dependencies": {
-    "@/a": "workspace:*"
-  },
-  "devDependencies": {
-    "bunup": "^0.8.23"
+    "@/a": "workspace:*",
+    "@/b": "workspace:*",
+    "@/c": "workspace:*"
   }
 }

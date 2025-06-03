@@ -7,6 +7,12 @@
   "references": [
     {
       "path": "../../sources/package-a"
+    },
+    {
+      "path": "../../sources/package-b"
+    },
+    {
+      "path": "../../sources/package-c"
     }
   ]
 }

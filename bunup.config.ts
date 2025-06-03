@@ -15,14 +15,12 @@ const ws_sources = dirs_sources.map((dir) => ({
   config: {
     entry: "src/index.ts",
     preferredTsconfigPath: "./tsconfig.json",
-    // clean: true
-    // dts: true,
-    // external: ["valibot"]
-    // format: ["esm"],
-    // minifyIdentifiers: true,
-    // minifySyntax: true,
-    // minifyWhitespace: true,
-    // minify: true
+    clean: true,
+    format: ["esm"],
+    dts: true,
+
+    // TODO: validate
+    sourcemap: "linked", // +4% increase in size
   }
 } satisfies DefineWorkspaceItem))
 
