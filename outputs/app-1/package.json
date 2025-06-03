@@ -1,6 +1,7 @@
 {
   "name": "@/app-1",
   "main": "./src/index.ts",
+  "type": "module",
   "scripts": {
     "dev": "bunup src/index.ts --watch",
     "build": "bunup src/index.ts"

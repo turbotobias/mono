@@ -2,7 +2,8 @@
   "name": "mono",
   "scripts": {
     "dev": "update-ts-references && tsc -b --extendedDiagnostics",
-    "build": "update-ts-references && tsc -b --extendedDiagnostics",
+    "build:bunup": "bunup && update-ts-references && tsc --extendedDiagnostics",
+    "build:vite": " && update-ts-references && tsc --extendedDiagnostics",
     "postinstall": "update-ts-references"
   },
   "engines": {
@@ -21,7 +22,11 @@
     }
   },
   "devDependencies": {
+    "vite": "npm:rolldown-vite@latest",
     "update-ts-references": "^3.6.0"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@latest"
   },
   "version": "1.0.0",
   "description": ""

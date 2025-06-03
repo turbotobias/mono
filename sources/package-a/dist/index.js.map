@@ -5,6 +5,6 @@
     "\nimport { test_c } from \"@/c\"\n\ntest_c()\n\nexport const test_a = (): void => console.log(\"from package-a!\")\n"
   ],
   "mappings": ";AACA;AAEA,OAAO;AAEA,IAAM,SAAS,MAAY,QAAQ,IAAI,iBAAiB;",
-  "debugId": "0ED117E63A373EBF64756E2164756E21",
+  "debugId": "60FFAC80312022D164756E2164756E21",
   "names": []
 }

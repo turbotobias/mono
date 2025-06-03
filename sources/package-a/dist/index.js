@@ -6,5 +6,5 @@ export {
   test_a
 };
 
-//# debugId=0ED117E63A373EBF64756E2164756E21
-//# sourceMappingURL=index.mjs.map
+//# debugId=60FFAC80312022D164756E2164756E21
+//# sourceMappingURL=index.js.map

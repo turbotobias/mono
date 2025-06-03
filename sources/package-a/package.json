@@ -1,6 +1,7 @@
 {
   "name": "@/a",
   "main": "./src/index.ts",
+  "type": "module",
   "dependencies": {
     "@/c": "workspace:*"
   }

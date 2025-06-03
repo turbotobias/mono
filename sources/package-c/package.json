@@ -1,4 +1,5 @@
 {
   "name": "@/c",
-  "main": "./src/index.ts"
+  "main": "./src/index.ts",
+  "type": "module"
 }

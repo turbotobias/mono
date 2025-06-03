@@ -1,4 +1,15 @@
-Monorepo with bun, vite, rolldown, cloudflare
+Draft for a typescript monorepo with bun, vite+rolldown, cloudflare
+
+| Category | Technology |
+|----------|------------|
+| Scripts | bun |
+| Workspaces | bun |
+| Package Manager | bun |
+| TypeScript Project References | update-ts-references |
+| Bundle Source | vite+rolldown |
+| Bundle Outputs | vite+rolldown |
+| Bundle Target | cloudflare |
+
 
 Separate /sources and /outputs with strict boundaries, use .d.ts for type surfaces, and always bundle directly from source
 

@@ -4,5 +4,5 @@ export {
   test_c
 };
 
-//# debugId=62D0EC4710AAE2C064756E2164756E21
-//# sourceMappingURL=index.mjs.map
+//# debugId=699EE38EAA1A34D264756E2164756E21
+//# sourceMappingURL=index.js.map
