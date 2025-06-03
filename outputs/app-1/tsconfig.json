@@ -1,10 +1,24 @@
 {
-  "extends": "../../tsconfig.outputs.json",
+  "extends": "@/config-tsconfig/outputs",
+  "exclude": [
+    "**/node_modules",
+    "**/dist"
+  ],
+  "include": [
+    "src/index.ts",
+    "bunup.config.ts"
+  ],
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "."
   },
   "references": [
+    {
+      "path": "../../internals/config-bunup"
+    },
+    {
+      "path": "../../internals/config-tsconfig"
+    },
     {
       "path": "../../sources/package-a"
     },

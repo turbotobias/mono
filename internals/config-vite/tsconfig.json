@@ -1,0 +1,19 @@
+{
+  "extends": "@/config-tsconfig/internals",
+  "exclude": [
+    "**/node_modules",
+    "**/dist"
+  ],
+  "files": [
+    "vite.config.ts"
+  ],
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "."
+  },
+  "references": [
+    {
+      "path": "../config-tsconfig"
+    }
+  ]
+}

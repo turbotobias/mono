@@ -1,0 +1,11 @@
+{
+  "version": "0.0.0",
+  "name": "@/script-bun",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "@/config-tsconfig": "workspace:*"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.0",
+  "name": "@/config-bunup",
+  "type": "module",
+  "main": "./bunup.config.ts",
+  "types": "./bunup.config.ts",
+  "devDependencies": {
+    "bunup": "catalog:",
+    "@/config-tsconfig": "workspace:*"
+  }
+}

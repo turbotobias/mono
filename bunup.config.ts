@@ -1,27 +1,22 @@
-import { defineWorkspace, type DefineWorkspaceItem } from "bunup"
-import { get_dirs_from_path } from "./__scripts/files-dirs"
+import { defineWorkspace } from "bunup"
+import { get_dirs_from_path } from "@/script-bun"
+import { get_bunup_config } from "@/config-bunup"
 
 const [dirs_sources, dirs_outputs] = await Promise.all([
   get_dirs_from_path("./sources"),
   get_dirs_from_path("./outputs")
 ])
 
-console.log("Directory names in /sources:", dirs_sources)
-console.log("Directory names in /outputs:", dirs_outputs)
-
-const ws_sources = dirs_sources.map((dir) => ({
+const ws_sources = dirs_sources.map((dir) => get_bunup_config({
   name: dir,
   root: `sources/${dir}`,
-  config: {
-    entry: "src/index.ts",
-    preferredTsconfigPath: "./tsconfig.json",
-    clean: true,
-    format: ["esm"],
-    dts: true,
+  entry: "src/index.ts",
+}))
 
-    // TODO: validate
-    sourcemap: "linked", // +4% increase in size
-  }
-} satisfies DefineWorkspaceItem))
+const ws_outputs = dirs_outputs.map((dir) => get_bunup_config({
+  name: dir,
+  root: `outputs/${dir}`,
+  entry: "src/index.ts",
+}))
 
-export default defineWorkspace(ws_sources)
+export default defineWorkspace([...ws_sources, /** ...ws_outputs */])

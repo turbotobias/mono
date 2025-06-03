@@ -1,4 +1,5 @@
 {
+  "version": "0.0.0",
   "name": "@/app-1",
   "main": "./src/index.ts",
   "type": "module",
@@ -6,9 +7,11 @@
     "dev": "bunup src/index.ts --watch",
     "build": "bunup src/index.ts"
   },
-  "dependencies": {
+  "devDependencies": {
     "@/a": "workspace:*",
     "@/b": "workspace:*",
-    "@/c": "workspace:*"
+    "@/c": "workspace:*",
+    "@/config-bunup": "workspace:*",
+    "@/config-tsconfig": "workspace:*"
   }
 }

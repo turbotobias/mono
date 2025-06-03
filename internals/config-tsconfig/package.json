@@ -1,0 +1,10 @@
+{
+  "version": "0.0.0",
+  "name": "@/config-tsconfig",
+  "type": "module",
+  "exports": {
+    "./internals": "./tsconfig.internals.json",
+    "./outputs": "./tsconfig.outputs.json",
+    "./sources": "./tsconfig.sources.json"
+  }
+}

@@ -46,7 +46,6 @@ const ws_sources = dirs_sources.map((dir) => ({
 } satisfies DefineWorkspaceItem))
 ```
 CLI ⚡️ Build completed in 6ms
-CJS dist/index.js    package-b
 
 File          |    Size |    Gzip
 ------------- | ------- | -------
@@ -64,17 +63,10 @@ const ws_sources = dirs_sources.map((dir) => ({
     preferredTsconfigPath: "./tsconfig.json",
     clean: true
     dts: true,
-    // external: ["valibot"]
-    // format: ["esm"],
-    // minifyIdentifiers: true,
-    // minifySyntax: true,
-    // minifyWhitespace: true,
-    // minify: true
   }
 } satisfies DefineWorkspaceItem))
 ```
 CLI ⚡️ Build completed in 6ms
-ESM dist/index.mjs    package-b
 
 File           |    Size |  Gzip
 -------------- | ------- | -----
@@ -94,16 +86,10 @@ Total          | 1.74 KB | 587 B
     clean: true,
     format: ["esm"],
     dts: true,
-    // external: ["valibot"]
-    // minifyIdentifiers: true,
-    // minifySyntax: true,
-    // minifyWhitespace: true,
-    // minify: true
   }
 } satisfies DefineWorkspaceItem
 ```
 CLI ⚡️ Build completed in 24ms
-DTS dist/index.d.mts    package-b
 
 File             |    Size |    Gzip
 ---------------- | ------- | -------
@@ -125,10 +111,6 @@ Total            | 4.39 KB | 1.13 KB
     format: ["esm"],
     dts: true,
     minifyIdentifiers: true, // ~7% reduction
-    // minifySyntax: true,
-    // minifyWhitespace: true,
-    // minify: true
-    // external: ["valibot"]
   }
 } satisfies DefineWorkspaceItem
 ```
@@ -154,10 +136,6 @@ Total            | 4.22 KB | 1.15 KB
     format: ["esm"],
     dts: true,
     minifySyntax: true, // ~5% reduction
-    // minifyWhitespace: true,
-    // external: ["valibot"]
-    // minify: true
-    // minifyIdentifiers: true,
   }
 } satisfies DefineWorkspaceItem
 ```
@@ -182,10 +160,6 @@ Total            | 4.30 KB | 1.13 KB
     format: ["esm"],
     dts: true,
     minifyWhitespace: true, // ~7% reduction
-    // minify: true
-    // external: ["valibot"]
-    // minifyIdentifiers: true,
-    // minifySyntax: true,
   }
 } satisfies DefineWorkspaceItem
 ```
@@ -210,10 +184,6 @@ Total            | 4.18 KB | 1.08 KB
     format: ["esm"],
     dts: true,
     minify: true // ~20% reduction
-    // external: ["valibot"]
-    // minifyIdentifiers: true,
-    // minifySyntax: true,
-    // minifyWhitespace: true,
   }
 } satisfies DefineWorkspaceItem
 ```
@@ -240,10 +210,6 @@ Total            | 3.92 KB | 1.13 KB
     format: ["esm"],
     dts: true,
     external: ["valibot"] // 0% reduction
-    // minify: true
-    // minifyWhitespace: true,
-    // minifyIdentifiers: true,
-    // minifySyntax: true,
   }
 } satisfies DefineWorkspaceItem
 ```

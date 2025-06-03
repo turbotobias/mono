@@ -12,22 +12,25 @@
   },
   "workspaces": {
     "packages": [
-      "sources/*",
-      "outputs/*"
+      "internals/*",
+      "outputs/*",
+      "sources/*"
     ],
     "catalog": {
+      "@types/bun": "^1.2.15",
+      "bunup": "^0.8.25",
       "typescript": "^5.8.3",
-      "bunup": "^5.8.3",
-      "@types/bun": "^1.2.15"
+      "vite": "npm:rolldown-vite@latest"
     }
   },
   "devDependencies": {
-    "vite": "npm:rolldown-vite@latest",
+    "@/config-bunup": "workspace:*",
+    "@/config-vite": "workspace:*",
+    "@/script-bun": "workspace:*",
     "update-ts-references": "^3.6.0"
   },
   "overrides": {
     "vite": "npm:rolldown-vite@latest"
   },
-  "version": "1.0.0",
-  "description": ""
+  "version": "0.0.0"
 }

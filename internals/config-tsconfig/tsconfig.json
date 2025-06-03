@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.internals.json",
+  "exclude": [
+    "**/node_modules",
+    "**/dist"
+  ],
+  "files": [
+    "vite.config.ts"
+  ],
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "."
+  }
+}
