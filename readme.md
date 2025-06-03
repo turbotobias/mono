@@ -1,5 +1,4 @@
-
-Faster typescript lookup in monorepo
+Monorepo with bun, vite, rolldown, cloudflare
 
 Separate /sources and /outputs with strict boundaries, use .d.ts for type surfaces, and always bundle directly from source
 
@@ -12,4 +11,5 @@ Never bundled directly; only emits .d.ts files for outputs during development.
 Contains any to-be-shipped code (web, native, CLI, etc.).
 Always bundles directly from sources.
 User-facing bundles are built here.
-Maybe introduce /deploys to more easily replicate apps across different production environments
+
+- Maybe introduce /deploys to more easily replicate outputs (apps) across different production environments
