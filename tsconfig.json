@@ -17,6 +17,9 @@
       "path": "outputs/app-1"
     },
     {
+      "path": "outputs/redwood-sdk"
+    },
+    {
       "path": "sources/package-a"
     },
     {

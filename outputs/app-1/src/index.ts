@@ -1,5 +1,11 @@
-import { test_c } from "@/c"
+import { get_bunup_config } from "@/config-bunup"
+
+
 
 export default (): void => {
-  test_c()
+  get_bunup_config({
+    name: "app-1",
+    root: ".",
+    entry: "src/index.ts",
+  })
 }

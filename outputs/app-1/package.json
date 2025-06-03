@@ -4,14 +4,15 @@
   "main": "./src/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bunup src/index.ts --watch",
-    "build": "bunup src/index.ts"
+    "dev": "bun x --bun vite",
+    "build": "bun x --bun vite build"
   },
   "devDependencies": {
     "@/a": "workspace:*",
     "@/b": "workspace:*",
     "@/c": "workspace:*",
-    "@/config-bunup": "workspace:*",
-    "@/config-tsconfig": "workspace:*"
+    "@/config-vite": "workspace:*",
+    "@/config-tsconfig": "workspace:*",
+    "vite": "catalog:"
   }
 }

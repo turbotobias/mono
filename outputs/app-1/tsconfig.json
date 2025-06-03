@@ -5,8 +5,8 @@
     "**/dist"
   ],
   "include": [
-    "src/index.ts",
-    "bunup.config.ts"
+    "vite.config.ts",
+    "src/index.ts"
   ],
   "compilerOptions": {
     "outDir": "dist",
@@ -14,10 +14,10 @@
   },
   "references": [
     {
-      "path": "../../internals/config-bunup"
+      "path": "../../internals/config-tsconfig"
     },
     {
-      "path": "../../internals/config-tsconfig"
+      "path": "../../internals/config-vite"
     },
     {
       "path": "../../sources/package-a"
