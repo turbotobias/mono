@@ -1,12 +1,12 @@
 import { defineApp, ErrorResponse } from "rwsdk/worker";
 import { route, render, prefix } from "rwsdk/router";
-import { Document } from "@/app/Document";
-import { Home } from "@/app/pages/Home";
-import { setCommonHeaders } from "@/app/headers";
-import { userRoutes } from "@/app/pages/user/routes";
+import { Document } from "~/app/Document";
+import { Home } from "~/app/pages/Home";
+import { setCommonHeaders } from "~/app/headers";
+import { userRoutes } from "~/app/pages/user/routes";
 import { sessions, setupSessionStore } from "./session/store";
 import { Session } from "./session/durableObject";
-import { type User, db, setupDb } from "@/db";
+import { type User, db, setupDb } from "~/db";
 import { env } from "cloudflare:workers";
 export { SessionDurableObject } from "./session/durableObject";
 

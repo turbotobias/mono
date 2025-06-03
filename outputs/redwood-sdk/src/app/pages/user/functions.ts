@@ -8,9 +8,9 @@ import {
   AuthenticationResponseJSON,
 } from "@simplewebauthn/server";
 
-import { sessions } from "@/session/store";
+import { sessions } from "~/session/store";
 import { requestInfo } from "rwsdk/worker";
-import { db } from "@/db";
+import { db } from "~/db";
 import { env } from "cloudflare:workers";
 
 const IS_DEV = process.env.NODE_ENV === "development";
