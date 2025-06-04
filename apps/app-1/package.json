@@ -11,7 +11,7 @@
     "@mono/a": "workspace:*",
     "@mono/b": "workspace:*",
     "@mono/c": "workspace:*",
-    "@mono/config-tsconfig": "workspace:*",
+    "@mono/tsconfig": "workspace:*",
     "vite": "catalog:"
   }
 }

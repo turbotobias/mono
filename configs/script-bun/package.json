@@ -6,6 +6,6 @@
   "types": "./src/index.ts",
   "devDependencies": {
     "@types/bun": "catalog:",
-    "@mono/config-tsconfig": "workspace:*"
+    "@mono/tsconfig": "workspace:*"
   }
 }

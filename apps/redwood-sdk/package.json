@@ -31,7 +31,7 @@
     "rwsdk": "0.0.88"
   },
   "devDependencies": {
-    "@mono/config-tsconfig": "workspace:*",
+    "@mono/tsconfig": "workspace:*",
     "vite": "catalog:",
     "@types/node": "^22.15.29",
     "@types/react": "^19.1.6",

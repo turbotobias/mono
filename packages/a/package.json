@@ -3,8 +3,11 @@
   "name": "@mono/a",
   "main": "./src/index.ts",
   "type": "module",
+  "scripts": {
+    "test": "bun test"
+  },
   "dependencies": {
     "@mono/c": "workspace:*",
-    "@mono/config-tsconfig": "workspace:*"
+    "@mono/tsconfig": "workspace:*"
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": "0.0.0",
-  "name": "@mono/config-tsconfig",
+  "name": "@mono/tsconfig",
   "main": "./tsconfig.base.json",
   "type": "module",
   "exports": {

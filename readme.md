@@ -1,6 +1,6 @@
 Draft for a vanillaer typescript monorepo
 
-- `/apps` deployable code (apps, infra, automations...)
+- `/apps` to be deployed (apps, infra, automations...)
 - `/packages` source code (not pre-bundled (TS references instead))
 - `/configs` internal code (anything not to be deployed (?))
 

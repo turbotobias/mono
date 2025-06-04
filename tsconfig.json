@@ -1,9 +1,9 @@
 {
-  "extends": "./configs/config-tsconfig/tsconfig.base.json",
+  // "extends": "./configs/config-tsconfig/tsconfig.base.json",
   "files": [],
   "references": [
     {
-      "path": "configs/config-bunup"
+      "path": "configs/bunup"
     },
     {
       "path": "configs/script-bun"

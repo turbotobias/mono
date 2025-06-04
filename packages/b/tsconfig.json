@@ -1,5 +1,5 @@
 {
-  "extends": "@mono/config-tsconfig/packages",
+  "extends": "@mono/tsconfig/packages",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",

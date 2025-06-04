@@ -1,5 +1,3 @@
-
-import { test_c } from "@mono/c"
 import { expect, test } from "bun:test"
 
 test("function", () => {
@@ -8,7 +6,3 @@ test("function", () => {
   }
   expect(result()).toStrictEqual(2)
 })
-
-test_c()
-
-export const test_a = (): void => console.log("from a!")

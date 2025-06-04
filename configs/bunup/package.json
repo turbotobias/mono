@@ -1,11 +1,11 @@
 {
   "version": "0.0.0",
-  "name": "@mono/config-bunup",
+  "name": "@mono/bunup",
   "type": "module",
   "main": "./bunup.config.ts",
   "devDependencies": {
     "bunup": "catalog:",
-    "@mono/config-tsconfig": "workspace:*"
+    "@mono/tsconfig": "workspace:*"
   },
   "exports": {
     ".": "./bunup.config.ts",

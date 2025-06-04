@@ -1,6 +1,6 @@
 
 import { HeeeySchema } from "@mono/b"
-import { get_bunup_config } from "@mono/config-bunup/utils"
+import { get_bunup_config } from "@mono/bunup/utils"
 
 console.log(HeeeySchema.type)
 
