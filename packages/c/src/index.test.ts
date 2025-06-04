@@ -2,7 +2,7 @@ import { expect, test } from "bun:test"
 
 test("function", () => {
   const result = () => {
-    return 1
+    return 3
   }
-  expect(result()).toStrictEqual(1)
+  expect(result()).toStrictEqual(3)
 })

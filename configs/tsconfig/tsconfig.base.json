@@ -3,10 +3,10 @@
   "compilerOptions": {
     "types": [],
     "lib": [
-      "ESNext",
+      "ES2024",
       "WebWorker"
     ],
-    "target": "ESNext",
+    "target": "ES2024",
     "module": "ESNext",
     "moduleDetection": "force",
     "moduleResolution": "bundler",
@@ -23,6 +23,9 @@
     "sourceMap": false,
     "strict": true,
     "verbatimModuleSyntax": true,
+    "useDefineForClassFields": true,
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false,
     "jsx": "react-jsx",
   }
 }

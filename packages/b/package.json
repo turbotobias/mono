@@ -3,6 +3,9 @@
   "name": "@mono/b",
   "main": "./src/index.ts",
   "type": "module",
+  "scripts": {
+    "check-types": "tsc --incremental --extendedDiagnostics"
+  },
   "devDependencies": {
     "valibot": "^1.1.0",
     "@mono/tsconfig": "workspace:*"

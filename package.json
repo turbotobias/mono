@@ -4,7 +4,7 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "postinstall": "bun check-types",
-    "check-types": "tsc -b --incremental --extendedDiagnostics && update-ts-references",
+    "check-types": "tsc -b --incremental --extendedDiagnostics && update-ts-references --strict",
     "build:bunup": "bunup --config ./configs/bunup/bunup.config.ts && bun check-types"
   },
   "packageManager": "bun@1.2.15",
