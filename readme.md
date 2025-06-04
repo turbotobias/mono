@@ -6,24 +6,24 @@ Draft for a typescript monorepo with bun, vite+rolldown, cloudflare
 | Workspaces | bun |
 | Package manager | bun |
 | TypeScript project references | update-ts-references |
-| Bundle `/sources` | vite+rolldown |
-| Bundle `/outputs` | vite+rolldown |
+| Bundle `/packages` | vite+rolldown |
+| Bundle `/apps` | vite+rolldown |
 | Bundle target | cloudflare |
 
 
 Code organization
 
- `/sources/`
+ `/packages/`
   - any source code (utilities, libraries, primitives, etc.).
   - never bundled
 
- `/outputs/`
+ `/apps/`
   - any to-be-shipped code (web, native, cli, etc.).
-  - bundles directly from sources
+  - bundles directly from packages
 
 ----
 
-`/internals`
+`/configs`
 - configs, scripts, etc.
 
 `/deploys` (maybe)

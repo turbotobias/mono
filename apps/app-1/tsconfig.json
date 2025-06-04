@@ -1,0 +1,25 @@
+{
+  "extends": "@mono/config-tsconfig/apps",
+  "exclude": [
+    "**/node_modules",
+    "**/dist"
+  ],
+  "include": [
+    "vite.config.ts",
+    "src/*.ts"
+  ],
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "references": [
+    {
+      "path": "../../packages/package-a"
+    },
+    {
+      "path": "../../packages/package-b"
+    },
+    {
+      "path": "../../packages/package-c"
+    }
+  ]
+}

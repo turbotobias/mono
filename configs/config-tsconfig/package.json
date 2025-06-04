@@ -1,0 +1,11 @@
+{
+  "version": "0.0.0",
+  "name": "@mono/config-tsconfig",
+  "main": "./tsconfig.base.json",
+  "type": "module",
+  "exports": {
+    ".": "./tsconfig.base.json",
+    "./apps": "./tsconfig.apps.json",
+    "./packages": "./tsconfig.packages.json"
+  }
+}

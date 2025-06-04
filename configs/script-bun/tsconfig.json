@@ -1,0 +1,9 @@
+{
+  "extends": "@mono/config-tsconfig",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "isolatedDeclarations": false,
+    "emitDeclarationOnly": true,
+  }
+}

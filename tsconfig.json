@@ -1,28 +1,27 @@
 {
-  "extends": "./internals/config-tsconfig/tsconfig.base.json",
+  "extends": "./configs/config-tsconfig/tsconfig.base.json",
   "files": [],
   "references": [
     {
-      "path": "internals/config-bunup"
+      "path": "configs/config-bunup"
     },
     {
-      "path": "internals/script-bun"
+      "path": "configs/script-bun"
     },
     {
-      "path": "outputs/app-1"
+      "path": "apps/app-1"
     },
     {
-      "path": "outputs/redwood-sdk"
+      "path": "apps/redwood-sdk"
     },
     {
-      "path": "sources/package-a"
+      "path": "packages/package-a"
     },
     {
-      "path": "sources/package-b"
+      "path": "packages/package-b"
     },
     {
-      "path": "sources/package-c"
+      "path": "packages/package-c"
     }
-  ],
-  "compilerOptions": {}
+  ]
 }

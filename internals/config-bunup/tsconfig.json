@@ -1,4 +1,0 @@
-{
-  "extends": "@mono/config-tsconfig/internals",
-  "compilerOptions": {}
-}

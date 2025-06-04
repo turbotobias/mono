@@ -1,6 +1,0 @@
-{
-  "extends": "@mono/config-tsconfig/internals",
-  "compilerOptions": {
-    "rootDir": "src"
-  }
-}

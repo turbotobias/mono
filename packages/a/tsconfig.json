@@ -1,0 +1,14 @@
+{
+  "extends": "@mono/config-tsconfig/packages",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "isolatedDeclarations": false,
+    "emitDeclarationOnly": true
+  },
+  "references": [
+    {
+      "path": "../package-c"
+    }
+  ]
+}
