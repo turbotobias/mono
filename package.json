@@ -25,9 +25,10 @@
     }
   },
   "devDependencies": {
-    "@mono/config-tsconfig": "workspace:*",
     "@mono/config-bunup": "workspace:*",
+    "@mono/config-tsconfig": "workspace:*",
     "@mono/script-bun": "workspace:*",
+    "nx": "^21.1.2",
     "update-ts-references": "^3.6.0"
   },
   "version": "0.0.0"

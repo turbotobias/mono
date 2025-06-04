@@ -1,12 +1,9 @@
 {
-  "explorer.excludeGitIgnore": false,
-
+  "explorer.excludeGitIgnore": true,
   // ---- typescript ----
   "typescript.tsdk": "./node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.tsserver.maxTsServerMemory": 3999,
-  "typescript.suggest.autoImports": true,
-
   // ---- formatting ----
   "editor.codeActionsOnSave": {
     "source.fixAll": "always",
@@ -15,18 +12,15 @@
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
-
+  },
+  "nxConsole.generateAiAgentRules": true
   // TODO: uncomment or remove comments as needed
-
   // ---- typescript ----
   // "typescript.disableAutomaticTypeAcquisition": true,
   // "typescript.suggest.autoImports": true,
-  
   // ---- oxc ----
   // "oxc.enable": true,
   // "oxc.configPath": "../configs/lint/oxlint.json",
-
   // ---- formatting ----
   // "editor.defaultFormatter": "oxc.oxc-vscode",
   // "[typescriptreact]": {
