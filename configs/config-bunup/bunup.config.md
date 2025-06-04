@@ -18,7 +18,7 @@ const ws_packages = dirs_packages.map((dir) => ({
 } satisfies DefineWorkspaceItem))
 ```
 CLI ⚡️ Build completed in 5ms
-CJS dist/index.js    package-b
+CJS dist/index.js    b
 
 File          |    Size |    Gzip
 ------------- | ------- | -------
@@ -188,7 +188,7 @@ Total            | 4.18 KB | 1.08 KB
 } satisfies DefineWorkspaceItem
 ```
 CLI ⚡️ Build completed in 27ms
-DTS dist/index.d.mts    package-b
+DTS dist/index.d.mts    b
 
 File             |    Size |    Gzip
 ---------------- | ------- | -------

@@ -15,13 +15,13 @@
       "path": "apps/redwood-sdk"
     },
     {
-      "path": "packages/package-a"
+      "path": "packages/a"
     },
     {
-      "path": "packages/package-b"
+      "path": "packages/b"
     },
     {
-      "path": "packages/package-c"
+      "path": "packages/c"
     }
   ]
 }

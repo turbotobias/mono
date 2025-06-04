@@ -1,11 +1,10 @@
-import { describe, expect, it, beforeEach, afterEach } from "bun:test";
-import { existsSync, rmSync } from "fs";
-import path from "path";
 import { $ } from "bun";
+import { afterEach, beforeEach, describe, expect, it } from "bun:test";
+import { existsSync, rmSync } from "fs";
 
 describe("clone-package script", () => {
-  const sourceDir = "sources/package-a";
-  const testClones = ["sources/package-a-clone-1", "sources/package-a-clone-2", "sources/package-a-clone-3"];
+  const sourceDir = "sources/a";
+  const testClones = ["sources/a-clone-1", "sources/a-clone-2", "sources/a-clone-3"];
 
   beforeEach(async () => {
     // Clean up any existing test clones
@@ -25,52 +24,52 @@ describe("clone-package script", () => {
     }
   });
 
-  it("should clone package-a directory n times with correct naming", async () => {
+  it("should clone a directory n times with correct naming", async () => {
     const result = await $`bun clone-package.ts 3`.quiet();
 
     expect(result.exitCode).toBe(0);
-    expect(existsSync("sources/package-a-clone-1")).toBe(true);
-    expect(existsSync("sources/package-a-clone-2")).toBe(true);
-    expect(existsSync("sources/package-a-clone-3")).toBe(true);
+    expect(existsSync("sources/a-clone-1")).toBe(true);
+    expect(existsSync("sources/a-clone-2")).toBe(true);
+    expect(existsSync("sources/a-clone-3")).toBe(true);
 
     // Verify directory contents are copied correctly
-    expect(existsSync("sources/package-a-clone-1/src/index.ts")).toBe(true);
-    expect(existsSync("sources/package-a-clone-1/tsconfig.json")).toBe(true);
-    expect(existsSync("sources/package-a-clone-2/src/index.ts")).toBe(true);
-    expect(existsSync("sources/package-a-clone-3/src/index.ts")).toBe(true);
+    expect(existsSync("sources/a-clone-1/src/index.ts")).toBe(true);
+    expect(existsSync("sources/a-clone-1/tsconfig.json")).toBe(true);
+    expect(existsSync("sources/a-clone-2/src/index.ts")).toBe(true);
+    expect(existsSync("sources/a-clone-3/src/index.ts")).toBe(true);
   });
 
   it("should clean all cloned directories with -c flag", async () => {
     // First create some clones
     await $`bun clone-package.ts 2`.quiet();
-    expect(existsSync("sources/package-a-clone-1")).toBe(true);
-    expect(existsSync("sources/package-a-clone-2")).toBe(true);
+    expect(existsSync("sources/a-clone-1")).toBe(true);
+    expect(existsSync("sources/a-clone-2")).toBe(true);
 
     // Then clean them
     const result = await $`bun clone-package.ts -c`.quiet();
     expect(result.exitCode).toBe(0);
-    expect(existsSync("sources/package-a-clone-1")).toBe(false);
-    expect(existsSync("sources/package-a-clone-2")).toBe(false);
+    expect(existsSync("sources/a-clone-1")).toBe(false);
+    expect(existsSync("sources/a-clone-2")).toBe(false);
   });
 
   it("should clean all cloned directories with --clean flag", async () => {
     // First create some clones
     await $`bun clone-package.ts 2`.quiet();
-    expect(existsSync("sources/package-a-clone-1")).toBe(true);
-    expect(existsSync("sources/package-a-clone-2")).toBe(true);
+    expect(existsSync("sources/a-clone-1")).toBe(true);
+    expect(existsSync("sources/a-clone-2")).toBe(true);
 
     // Then clean them
     const result = await $`bun clone-package.ts --clean`.quiet();
     expect(result.exitCode).toBe(0);
-    expect(existsSync("sources/package-a-clone-1")).toBe(false);
-    expect(existsSync("sources/package-a-clone-2")).toBe(false);
+    expect(existsSync("sources/a-clone-1")).toBe(false);
+    expect(existsSync("sources/a-clone-2")).toBe(false);
   });
 
   it("should handle zero clones gracefully", async () => {
     const result = await $`bun clone-package.ts 0`.quiet();
     expect(result.exitCode).toBe(0);
     // No directories should be created
-    expect(existsSync("sources/package-a-clone-1")).toBe(false);
+    expect(existsSync("sources/a-clone-1")).toBe(false);
   });
 
   it("should handle invalid arguments gracefully", async () => {
@@ -111,8 +110,8 @@ describe("clone-package script", () => {
 
     // Verify all directories were created
     for (let i = 1; i <= largeNumber; i++) {
-      expect(existsSync(`sources/package-a-clone-${i}`)).toBe(true);
-      expect(existsSync(`sources/package-a-clone-${i}/src/index.ts`)).toBe(true);
+      expect(existsSync(`sources/a-clone-${i}`)).toBe(true);
+      expect(existsSync(`sources/a-clone-${i}/src/index.ts`)).toBe(true);
     }
 
     // Clean up
@@ -120,7 +119,7 @@ describe("clone-package script", () => {
 
     // Verify all were cleaned
     for (let i = 1; i <= largeNumber; i++) {
-      expect(existsSync(`sources/package-a-clone-${i}`)).toBe(false);
+      expect(existsSync(`sources/a-clone-${i}`)).toBe(false);
     }
   });
 
@@ -148,21 +147,21 @@ describe("clone-package script", () => {
 
   it("should handle existing clone directories appropriately", async () => {
     // Create a clone manually
-    await $`mkdir -p sources/package-a-clone-1`.quiet();
+    await $`mkdir -p sources/a-clone-1`.quiet();
 
     // Try to create clones - should handle existing directory gracefully
     const result = await $`bun clone-package.ts 2`.quiet();
     expect(result.exitCode).toBe(0);
 
     // Should still create the second clone
-    expect(existsSync("sources/package-a-clone-2")).toBe(true);
+    expect(existsSync("sources/a-clone-2")).toBe(true);
   });
 
   it("should preserve file contents correctly", async () => {
     await $`bun clone-package.ts 1`.quiet();
 
-    const originalContent = await Bun.file("sources/package-a/src/index.ts").text();
-    const clonedContent = await Bun.file("sources/package-a-clone-1/src/index.ts").text();
+    const originalContent = await Bun.file("sources/a/src/index.ts").text();
+    const clonedContent = await Bun.file("sources/a-clone-1/src/index.ts").text();
 
     expect(clonedContent).toBe(originalContent);
   });

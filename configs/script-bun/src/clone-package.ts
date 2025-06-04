@@ -3,9 +3,9 @@
 import { existsSync, readdirSync, rmSync } from "node:fs";
 import { join } from "node:path";
 
-const SOURCE_DIR = "packages/package-a";
+const SOURCE_DIR = "packages/a";
 const SOURCES_DIR = "packages";
-const CLONE_PREFIX = "package-a-clone-";
+const CLONE_PREFIX = "a-clone-";
 
 function parseArguments(args: string[]) {
   const cleanFlags = ["-c", "--clean"];
