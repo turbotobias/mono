@@ -5,7 +5,7 @@
     "**/dist"
   ],
   "files": [
-    "bunup.config.ts"
+    "bunup.config.utils.ts"
   ],
   "compilerOptions": {
     "outDir": "dist",

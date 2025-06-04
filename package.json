@@ -2,7 +2,7 @@
   "name": "mono",
   "scripts": {
     "dev": "update-ts-references && tsc -b --extendedDiagnostics",
-    "build:bunup": "bunup && update-ts-references && tsc --extendedDiagnostics",
+    "build:bunup": "bunup --config ./internals/config-bunup/bunup.config.ts && update-ts-references && tsc --extendedDiagnostics",
     "postinstall": "update-ts-references"
   },
   "engines": {
@@ -27,6 +27,5 @@
     "@/script-bun": "workspace:*",
     "update-ts-references": "^3.6.0"
   },
-
   "version": "0.0.0"
 }

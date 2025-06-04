@@ -1,0 +1,40 @@
+{
+  "explorer.excludeGitIgnore": true,
+
+  // ---- typescript ----
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsserver.maxTsServerMemory": 3999,
+
+  // ---- formatting ----
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always",
+    "source.addMissingImports": "always"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+
+  // TODO: uncomment or remove comments as needed
+
+  // ---- typescript ----
+  // "typescript.disableAutomaticTypeAcquisition": true,
+  // "typescript.suggest.autoImports": true,
+  
+  // ---- oxc ----
+  // "oxc.enable": true,
+  // "oxc.configPath": "../configs/lint/oxlint.json",
+
+  // ---- formatting ----
+  // "editor.defaultFormatter": "oxc.oxc-vscode",
+  // "[typescriptreact]": {
+  //   "editor.defaultFormatter": "oxc.oxc-vscode"
+  // },
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[json]": {
+  //   "editor.defaultFormatter": "oxc.oxc-vscode"
+  // },
+}
