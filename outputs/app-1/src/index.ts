@@ -1,4 +1,4 @@
-import { get_bunup_config } from "@/config-bunup/utils"
+import { get_bunup_config } from "@mono/config-bunup/utils"
 
 export default (): void => {
   get_bunup_config({

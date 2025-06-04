@@ -1,6 +1,6 @@
 {
   "version": "0.0.0",
-  "name": "@/app-1",
+  "name": "@mono/app-1",
   "main": "./src/index.ts",
   "type": "module",
   "scripts": {
@@ -8,10 +8,10 @@
     "build": "bun x --bun vite build"
   },
   "devDependencies": {
-    "@/a": "workspace:*",
-    "@/b": "workspace:*",
-    "@/c": "workspace:*",
-    "@/config-tsconfig": "workspace:*",
+    "@mono/a": "workspace:*",
+    "@mono/b": "workspace:*",
+    "@mono/c": "workspace:*",
+    "@mono/config-tsconfig": "workspace:*",
     "vite": "catalog:"
   }
 }

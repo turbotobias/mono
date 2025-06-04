@@ -2,7 +2,9 @@
   "name": "mono",
   "scripts": {
     "dev": "update-ts-references && tsc -b --extendedDiagnostics",
-    "build:bunup": "bunup --config ./internals/config-bunup/bunup.config.ts && update-ts-references && tsc --extendedDiagnostics",
+    "build": "bunup --config ./internals/config-bunup/bunup.config.ts && update-ts-references && tsc --extendedDiagnostics",
+    "check": "tsc -b --extendedDiagnostics",
+    "check:fast": "tsc -b --incremental --extendedDiagnostics",
     "postinstall": "update-ts-references"
   },
   "engines": {
@@ -23,8 +25,9 @@
     }
   },
   "devDependencies": {
-    "@/config-bunup": "workspace:*",
-    "@/script-bun": "workspace:*",
+    "@mono/config-tsconfig": "workspace:*",
+    "@mono/config-bunup": "workspace:*",
+    "@mono/script-bun": "workspace:*",
     "update-ts-references": "^3.6.0"
   },
   "version": "0.0.0"

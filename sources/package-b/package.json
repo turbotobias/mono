@@ -1,10 +1,10 @@
 {
   "version": "0.0.0",
-  "name": "@/b",
+  "name": "@mono/b",
   "main": "./src/index.ts",
   "type": "module",
   "devDependencies": {
     "valibot": "^1.1.0",
-    "@/config-tsconfig": "workspace:*"
+    "@mono/config-tsconfig": "workspace:*"
   }
 }

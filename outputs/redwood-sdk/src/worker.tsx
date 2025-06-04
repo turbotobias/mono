@@ -1,14 +1,16 @@
-import { defineApp, ErrorResponse } from "rwsdk/worker";
-import { route, render, prefix } from "rwsdk/router";
-import { Document } from "~/app/Document";
-import { Home } from "~/app/pages/Home";
-import { setCommonHeaders } from "~/app/headers";
-import { userRoutes } from "~/app/pages/user/routes";
-import { sessions, setupSessionStore } from "./session/store";
-import { Session } from "./session/durableObject";
-import { type User, db, setupDb } from "~/db";
 import { env } from "cloudflare:workers";
+import { prefix, render, route } from "rwsdk/router";
+import { defineApp, ErrorResponse } from "rwsdk/worker";
+import { Document } from "~/app/Document";
+import { setCommonHeaders } from "~/app/headers";
+import { Home } from "~/app/pages/Home";
+import { userRoutes } from "~/app/pages/user/routes";
+import { type User, db, setupDb } from "~/db";
+import type { Session } from "./session/durableObject";
+import { sessions, setupSessionStore } from "./session/store";
 export { SessionDurableObject } from "./session/durableObject";
+
+import { FunctionSchema } from "@mono/b";
 
 export type AppContext = {
   session: Session | null;
@@ -18,6 +20,7 @@ export type AppContext = {
 export default defineApp([
   setCommonHeaders(),
   async ({ ctx, request, headers }) => {
+    console.log("FunctionSchema.type", FunctionSchema.type);
     await setupDb(env);
     setupSessionStore(env);
 

@@ -1,15 +1,9 @@
 {
-  "exclude": [
-    "**/node_modules",
-    "**/dist"
-  ],
+  "extends": "@mono/config-tsconfig",
   "files": [],
   "references": [
     {
       "path": "internals/config-bunup"
-    },
-    {
-      "path": "internals/config-tsconfig"
     },
     {
       "path": "internals/script-bun"
@@ -29,6 +23,5 @@
     {
       "path": "sources/package-c"
     }
-  ],
-  "compilerOptions": {}
+  ]
 }

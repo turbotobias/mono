@@ -1,5 +1,5 @@
 {
-  "extends": "@/config-tsconfig/sources",
+  "extends": "@mono/config-tsconfig/sources",
   "exclude": [
     "**/node_modules",
     "**/dist"
@@ -9,9 +9,6 @@
     "rootDir": "src"
   },
   "references": [
-    {
-      "path": "../../internals/config-tsconfig"
-    },
     {
       "path": "../package-c"
     }

@@ -1,16 +1,7 @@
 {
-  "extends": "@/config-tsconfig/sources",
-  "exclude": [
-    "**/node_modules",
-    "**/dist"
-  ],
+  "extends": "@mono/config-tsconfig/sources",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src"
-  },
-  "references": [
-    {
-      "path": "../../internals/config-tsconfig"
-    }
-  ]
+  }
 }

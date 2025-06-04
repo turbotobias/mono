@@ -1,17 +1,17 @@
 "use server";
 import {
-  generateRegistrationOptions,
   generateAuthenticationOptions,
-  verifyRegistrationResponse,
+  generateRegistrationOptions,
   verifyAuthenticationResponse,
-  RegistrationResponseJSON,
-  AuthenticationResponseJSON,
+  verifyRegistrationResponse,
+  type AuthenticationResponseJSON,
+  type RegistrationResponseJSON,
 } from "@simplewebauthn/server";
 
-import { sessions } from "~/session/store";
+import { env } from "cloudflare:workers";
 import { requestInfo } from "rwsdk/worker";
 import { db } from "~/db";
-import { env } from "cloudflare:workers";
+import { sessions } from "~/session/store";
 
 const IS_DEV = process.env.NODE_ENV === "development";
 

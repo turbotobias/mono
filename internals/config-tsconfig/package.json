@@ -1,8 +1,10 @@
 {
   "version": "0.0.0",
-  "name": "@/config-tsconfig",
+  "name": "@mono/config-tsconfig",
+  "main": "./tsconfig.base.json",
   "type": "module",
   "exports": {
+    ".": "./tsconfig.base.json",
     "./internals": "./tsconfig.internals.json",
     "./outputs": "./tsconfig.outputs.json",
     "./sources": "./tsconfig.sources.json"

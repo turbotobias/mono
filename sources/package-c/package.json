@@ -1,9 +1,9 @@
 {
   "version": "0.0.0",
-  "name": "@/c",
+  "name": "@mono/c",
   "main": "./src/index.ts",
   "type": "module",
   "devDependencies": {
-    "@/config-tsconfig": "workspace:*"
+    "@mono/config-tsconfig": "workspace:*"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "extends": "@/config-tsconfig/outputs",
+  "extends": "@mono/config-tsconfig/outputs",
   "exclude": [
     "**/node_modules",
     "**/dist"
@@ -9,13 +9,9 @@
     "src/index.ts"
   ],
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "."
+    "outDir": "dist"
   },
   "references": [
-    {
-      "path": "../../internals/config-tsconfig"
-    },
     {
       "path": "../../sources/package-a"
     },

@@ -1,5 +1,5 @@
-import { PrismaClient } from "~generated/prisma";
 import { PrismaD1 } from "@prisma/adapter-d1";
+import { PrismaClient } from "~generated/prisma";
 
 export type * from "~generated/prisma";
 

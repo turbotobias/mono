@@ -1,5 +1,5 @@
 
-import { test_c } from "@/c"
+import { test_c } from "@mono/c"
 
 test_c()
 

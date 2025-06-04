@@ -1,26 +1,10 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "lib": [
-      "ESNext"
-    ],
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleDetection": "force",
-    "moduleResolution": "bundler",
-    "composite": true,
-    "declaration": true,
+    "composite": false,
     "declarationMap": false,
-    "incremental": true,
     "isolatedModules": false,
     "isolatedDeclarations": false,
-    "noEmit": false,
-    "noEmitOnError": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "sourceMap": false,
-    "strict": true,
-    "verbatimModuleSyntax": true,
-    "jsx": "react-jsx",
+    "noEmit": true
   }
 }

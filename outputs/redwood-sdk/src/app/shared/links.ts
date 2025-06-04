@@ -1,3 +1,5 @@
 import { defineLinks } from "rwsdk/router";
 
-export const link = defineLinks(["/", "/user/login", "/user/logout"]);
+type TLink = ReturnType<typeof defineLinks<["/", "/user/login", "/user/logout"]>>;
+
+export const link: TLink = defineLinks(["/", "/user/login", "/user/logout"]);
