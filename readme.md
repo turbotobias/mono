@@ -1,30 +1,14 @@
-Draft for a typescript monorepo with bun, vite+rolldown, cloudflare
+Draft for a vanillaer typescript monorepo
+
+- `/apps` deployable code (apps, infra, automations...)
+- `/packages` source code (not pre-bundled (TS references instead))
+- `/configs` internal code (anything not to be deployed (?))
 
 | Category | Technology |
 |----------|------------|
 | Scripts | bun |
-| Workspaces | bun |
+| Workspaces (+ catalogs) | bun |
 | Package manager | bun |
-| TypeScript project references | update-ts-references |
-| Bundle `/packages` | vite+rolldown |
-| Bundle `/apps` | vite+rolldown |
-| Bundle target | cloudflare |
-
-
-Code organization
-
- `/packages/`
-  - any source code (utilities, libraries, primitives, etc.).
-  - never bundled
-
- `/apps/`
-  - any to-be-shipped code (web, native, cli, etc.).
-  - bundles directly from packages
-
-----
-
-`/configs`
-- configs, scripts, etc.
-
-`/deploys` (maybe)
-- to easily replicate apps across prods
+| TypeScript project references | bunx update-ts-references |
+| Task orchestration | turbo |
+| Hosting | cloudflare |
