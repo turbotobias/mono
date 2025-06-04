@@ -1,5 +1,6 @@
 import * as v from 'valibot';
 
+export type Heeey = string | "heeey"
 export const BigintSchema: v.BigintSchema<undefined> = v.bigint(); // bigint
 export const BooleanSchema: v.BooleanSchema<undefined> = v.boolean(); // boolean
 export const NullSchema: v.NullSchema<undefined> = v.null(); // null

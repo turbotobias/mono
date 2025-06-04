@@ -1,5 +1,5 @@
 {
-  "extends": "@mono/config-tsconfig",
+  "extends": "./internals/config-tsconfig/tsconfig.base.json",
   "files": [],
   "references": [
     {
@@ -23,5 +23,6 @@
     {
       "path": "sources/package-c"
     }
-  ]
+  ],
+  "compilerOptions": {}
 }
