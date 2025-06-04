@@ -4,6 +4,7 @@
   "main": "./src/index.ts",
   "type": "module",
   "devDependencies": {
-    "@mono/config-tsconfig": "workspace:*"
+    "@mono/config-tsconfig": "workspace:*",
+    "@mono/b": "workspace:*"
   }
 }

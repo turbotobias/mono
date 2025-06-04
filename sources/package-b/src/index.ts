@@ -1,6 +1,14 @@
 import * as v from 'valibot';
 
 export type Heeey = string | "heeey"
+export const HeeeySchema: v.SchemaWithPipe<readonly [v.StringSchema<undefined>, v.RegexAction<string, undefined>, v.TitleAction<string, "Username">, v.DescriptionAction<string, "A username must be between 4 and 16 characters long and can only contain letters, numbers, underscores and hyphens.">]> = v.pipe(
+  v.string(),
+  v.regex(/^[a-z0-9_-]{4,16}$/iu),
+  v.title('Username'),
+  v.description(
+    'A username must be between 4 and 16 characters long and can only contain letters, numbers, underscores and hyphens.'
+  )
+);
 export const BigintSchema: v.BigintSchema<undefined> = v.bigint(); // bigint
 export const BooleanSchema: v.BooleanSchema<undefined> = v.boolean(); // boolean
 export const NullSchema: v.NullSchema<undefined> = v.null(); // null

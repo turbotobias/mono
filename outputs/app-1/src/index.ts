@@ -1,4 +1,9 @@
+
+import { HeeeySchema } from "@mono/b"
 import { get_bunup_config } from "@mono/config-bunup/utils"
+
+console.log(HeeeySchema.type)
+
 
 export default (): void => {
   get_bunup_config({

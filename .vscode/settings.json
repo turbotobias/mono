@@ -5,6 +5,7 @@
   "typescript.tsdk": "./node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.tsserver.maxTsServerMemory": 3999,
+  "typescript.suggest.autoImports": true,
 
   // ---- formatting ----
   "editor.codeActionsOnSave": {
