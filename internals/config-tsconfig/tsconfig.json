@@ -5,7 +5,9 @@
     "**/dist"
   ],
   "files": [
-    "vite.config.ts"
+    "tsconfig.internals.json",
+    "tsconfig.sources.json",
+    "tsconfig.outputs.json"
   ],
   "compilerOptions": {
     "outDir": "dist",

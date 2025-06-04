@@ -1,5 +1,5 @@
 {
-  "explorer.excludeGitIgnore": true,
+  "explorer.excludeGitIgnore": false,
 
   // ---- typescript ----
   "typescript.tsdk": "./node_modules/typescript/lib",
