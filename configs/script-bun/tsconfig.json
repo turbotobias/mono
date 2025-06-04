@@ -1,5 +1,15 @@
 {
   "extends": "@mono/tsconfig",
+  "exclude": [
+    "dist",
+    "node_modules",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+  ],
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
