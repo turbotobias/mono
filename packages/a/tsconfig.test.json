@@ -1,5 +1,5 @@
 {
-  "extends": "@mono/tsconfig/packages",
+  "extends": "@mono/tsconfig/tests",
   "exclude": [
     "dist",
     "node_modules",
@@ -11,10 +11,5 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "."
-  },
-  "references": [
-    {
-      "path": "../c"
-    }
-  ]
+  }
 }

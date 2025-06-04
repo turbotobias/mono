@@ -6,6 +6,7 @@
   "exports": {
     ".": "./tsconfig.base.json",
     "./apps": "./tsconfig.apps.json",
-    "./packages": "./tsconfig.packages.json"
+    "./packages": "./tsconfig.packages.json",
+    "./tests": "./tsconfig.tests.json"
   }
 }
