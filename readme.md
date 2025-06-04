@@ -9,6 +9,7 @@ Draft for a vanillaer typescript monorepo
 | Scripts | bun |
 | Workspaces (+ catalogs) | bun |
 | Package manager | bun |
+| Test runner | bun |
 | TypeScript project references | bunx update-ts-references |
 | Task orchestration | turbo |
 | Hosting | cloudflare |
