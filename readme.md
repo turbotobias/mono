@@ -1,15 +1,15 @@
 Draft for a vanillaer typescript monorepo
 
-- `/apps` to be deployed (apps, infra, automations...)
-- `/packages` source code (TS references, not pre-bundled)
-- `/tooling` internal code (anything not to be deployed (?))
+- `/apps` to be deployed
+- `/packages` source code (TS references)
+- `/tooling` internal config, scripts, etc.
 
-| Category | Technology |
+| what | thing |
 |----------|------------|
-| Scripts | bun |
-| Workspaces (+ catalogs) | bun |
-| Package manager | bun |
-| Tests | bun |
-| TypeScript project references | bunx update-ts-references |
-| Task orchestration | turbo |
-| Hosting | cloudflare |
+| scripts | bun |
+| workspaces (+ catalogs) | bun |
+| package manager | bun |
+| tests | bun |
+| typescript project references | update-ts-references |
+| task orchestration | turbo |
+| hosting | cloudflare |
