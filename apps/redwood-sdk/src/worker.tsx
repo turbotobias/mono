@@ -12,7 +12,6 @@ export { SessionDurableObject } from "./session/durableObject";
 
 import { FunctionSchema } from "@mono/utils";
 
-
 export type AppContext = {
   session: Session | null;
   user: User | null;

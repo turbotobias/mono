@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "bun x --bun vite build"
+    "build": "vite build"
   },
   "dependencies": {
     "@mono/a": "workspace:*",

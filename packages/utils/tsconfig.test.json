@@ -9,6 +9,7 @@
     "**/*.test.tsx",
   ],
   "compilerOptions": {
+    "noEmit": true,
     "outDir": "dist",
     "rootDir": "src"
   }

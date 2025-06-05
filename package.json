@@ -6,14 +6,13 @@
     "bun": ">=1.2.15 <2"
   },
   "scripts": {
-    "dev": "update-ts-references && turbo dev",
-    "build": "update-ts-references && turbo build",
+    "dev": "bun i && turbo dev",
+    "build": "bun i && turbo build",
     "lint": "turbo lint",
-    "postinstall": "bun check",
-    "check:old": "bun check && bun tsc",
-    "check": "update-ts-references",
+    "check": "update-ts-references && bun tsc",
     "tsc": "tsc -b --incremental",
-    "build:bunup": "bunup --config ./tooling/bunup/bunup.config.ts && bun check-types"
+    "build:bunup": "bunup --config ./tooling/bunup/bunup.config.ts && bun check-types",
+    "postinstall": ""
   },
   "workspaces": {
     "packages": [

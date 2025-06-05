@@ -9,11 +9,8 @@
     "src/**/*"
   ],
   "compilerOptions": {
-    "isolatedDeclarations": false
+    "rootDir": "src",
+    "tsBuildInfoFile": "dist/tsconfig.build.tsbuildinfo"
   },
-  "references": [
-    {
-      "path": "./tsconfig.build.json"
-    }
-  ]
+  "references": []
 }
