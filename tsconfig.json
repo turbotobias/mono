@@ -9,7 +9,7 @@
       "path": "tooling/script-bun"
     },
     {
-      "path": "apps/app-1"
+      "path": "apps/app"
     },
     {
       "path": "apps/redwood-sdk"

@@ -2,7 +2,8 @@
   "extends": "./base.json",
   "compilerOptions": {
     "target": "es2022",
-    "declarationMap": false,
-    "emitDeclarationOnly": true
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "isolatedDeclarations": false
   }
 }

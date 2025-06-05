@@ -5,8 +5,8 @@
     "**/dist"
   ],
   "include": [
-    "vite.config.ts",
-    "src/*.ts"
+    "vite.config.mts",
+    "src/**/*"
   ],
   "compilerOptions": {
     "outDir": "dist"

@@ -1,17 +1,18 @@
 {
   "version": "0.0.0",
-  "name": "@mono/app-1",
-  "main": "./src/index.ts",
+  "name": "@mono/app",
   "type": "module",
   "scripts": {
-    "dev": "bun x --bun vite",
+    "dev": "vite",
     "build": "bun x --bun vite build"
   },
   "dependencies": {
     "@mono/a": "workspace:*",
-    "@mono/utils": "workspace:*",
     "@mono/c": "workspace:*",
     "@mono/tsconfig": "workspace:*",
-    "vite": "catalog:"
+    "@mono/utils": "workspace:*",
+    "rwsdk": "catalog:",
+    "vite": "catalog:",
+    "wrangler": "catalog:"
   }
 }
