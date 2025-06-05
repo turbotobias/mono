@@ -1,4 +1,3 @@
-import { type UserConfig } from "vite";
-declare const config: UserConfig;
-export default config;
+declare const _default: import("vite").UserConfig;
+export default _default;
 //# sourceMappingURL=vite.config.d.mts.map

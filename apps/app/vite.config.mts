@@ -1,8 +1,9 @@
 import { redwood } from "rwsdk/vite";
-import { defineConfig, type UserConfig } from "vite";
+import { defineConfig } from "vite";
 
-const config: UserConfig = defineConfig({
+export default defineConfig({
+  server: {
+    port: 3000,
+  },
   plugins: [redwood()],
 });
-
-export default config

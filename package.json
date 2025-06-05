@@ -9,7 +9,7 @@
     "dev": "bun i && turbo dev",
     "build": "bun i && turbo build",
     "lint": "turbo lint",
-    "check": "update-ts-references && bun tsc",
+    "check": "update-ts-references --ignoreReferencePaths ./tsconfig.build.json && bun tsc",
     "tsc": "tsc -b --incremental",
     "build:bunup": "bunup --config ./tooling/bunup/bunup.config.ts && bun check-types",
     "postinstall": ""
