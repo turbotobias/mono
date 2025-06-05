@@ -1,5 +1,4 @@
 import * as v from 'valibot';
-export * from "@mono/script-bun";
 export * from "./must";
 export type Heeey = string | "heeey"
 export const HeeeySchema: v.SchemaWithPipe<readonly [v.StringSchema<undefined>, v.RegexAction<string, undefined>, v.TitleAction<string, "Username">, v.DescriptionAction<string, "A username must be between 4 and 16 characters long and can only contain letters, numbers, underscores and hyphens.">]> = v.pipe(

@@ -17,6 +17,7 @@
     ],
     "lib": [
       "ESNext",
+      "WebWorker",
     ],
     "rootDir": "src",
     "outDir": "dist",

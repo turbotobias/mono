@@ -1,5 +1,5 @@
 {
-  "extends": "@mono/tsconfig/tests",
+  "extends": "@mono/tsconfig/tests.json",
   "exclude": [
     "dist",
     "node_modules",

@@ -1,5 +1,5 @@
 {
-  "extends": "@mono/tsconfig/apps",
+  "extends": "@mono/tsconfig/apps.json",
   "exclude": [
     "**/node_modules",
     "**/dist"

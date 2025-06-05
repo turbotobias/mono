@@ -1,6 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Strictest",
   "compilerOptions": {
     "types": [],
     "lib": [
@@ -23,13 +22,25 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": false,
-    "strict": true,
     "verbatimModuleSyntax": true,
     "useDefineForClassFields": true,
     "experimentalDecorators": false,
     "emitDecoratorMetadata": false,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true
+    "noImplicitOverride": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitUseStrict": false,
+    "noStrictGenericChecks": false,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "suppressExcessPropertyErrors": false,
+    "suppressImplicitAnyIndexErrors": false,
+    "useUnknownInCatchVariables": true
   }
 }

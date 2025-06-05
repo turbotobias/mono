@@ -7,6 +7,7 @@
   },
   "scripts": {
     "dev": "update-ts-references && turbo dev",
+    "build": "update-ts-references && turbo build",
     "lint": "turbo lint",
     "postinstall": "bun check",
     "check:old": "bun check && bun tsc",

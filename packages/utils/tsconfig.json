@@ -7,13 +7,9 @@
     "node_modules"
   ],
   "include": [
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*"
   ],
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "src",
-    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
     "isolatedDeclarations": false
   }
 }

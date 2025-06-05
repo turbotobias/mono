@@ -2,6 +2,18 @@
   "$schema": "./node_modules/turbo/schema.json",
   "ui": "tui",
   "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
     "lint": {
       "cache": true,
       "dependsOn": [
@@ -12,10 +24,6 @@
       "dependsOn": [
         "^test"
       ]
-    },
-    "dev": {
-      "cache": false,
-      "persistent": true
     }
   }
 }

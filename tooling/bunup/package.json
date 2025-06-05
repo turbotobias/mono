@@ -1,8 +1,12 @@
 {
   "version": "0.0.0",
-  "name": "@mono/utilsunup",
+  "name": "@mono/bunup",
   "type": "module",
   "main": "./bunup.config.ts",
+  "scripts": {
+    "dev": "tsc -p ./tsconfig.json --watch",
+    "build": "tsc -p ./tsconfig.json"
+  },
   "dependencies": {
     "bunup": "catalog:",
     "@mono/tsconfig": "workspace:*"

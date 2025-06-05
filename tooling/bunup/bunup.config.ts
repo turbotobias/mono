@@ -1,4 +1,4 @@
-import { get_dirs_from_path } from "@mono/script-bun"
+import { get_dirs_from_path } from "@mono/scripts"
 import { defineWorkspace } from "bunup"
 import { get_bunup_config } from "./bunup.config.utils"
 
