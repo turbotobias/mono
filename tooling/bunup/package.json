@@ -1,0 +1,14 @@
+{
+  "version": "0.0.0",
+  "name": "@mono/utilsunup",
+  "type": "module",
+  "main": "./bunup.config.ts",
+  "dependencies": {
+    "bunup": "catalog:",
+    "@mono/tsconfig": "workspace:*"
+  },
+  "exports": {
+    ".": "./bunup.config.ts",
+    "./utils": "./bunup.config.utils.ts"
+  }
+}

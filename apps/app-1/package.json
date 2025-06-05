@@ -7,9 +7,9 @@
     "dev": "bun x --bun vite",
     "build": "bun x --bun vite build"
   },
-  "devDependencies": {
+  "dependencies": {
     "@mono/a": "workspace:*",
-    "@mono/b": "workspace:*",
+    "@mono/utils": "workspace:*",
     "@mono/c": "workspace:*",
     "@mono/tsconfig": "workspace:*",
     "vite": "catalog:"

@@ -1,0 +1,8 @@
+{
+  "extends": "@mono/tsconfig/base.json",
+  "compilerOptions": {
+    "isolatedDeclarations": false,
+    "emitDeclarationOnly": true,
+    "outDir": "dist"
+  }
+}

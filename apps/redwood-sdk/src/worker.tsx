@@ -10,7 +10,7 @@ import type { Session } from "./session/durableObject";
 import { sessions, setupSessionStore } from "./session/store";
 export { SessionDurableObject } from "./session/durableObject";
 
-import { FunctionSchema } from "@mono/b";
+import { FunctionSchema } from "@mono/utils";
 
 
 export type AppContext = {

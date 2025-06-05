@@ -1,8 +1,8 @@
 Draft for a vanillaer typescript monorepo
 
 - `/apps` to be deployed (apps, infra, automations...)
-- `/packages` source code (not pre-bundled (TS references instead))
-- `/configs` internal code (anything not to be deployed (?))
+- `/packages` source code (TS references, not pre-bundled)
+- `/tooling` internal code (anything not to be deployed (?))
 
 | Category | Technology |
 |----------|------------|

@@ -1,10 +1,11 @@
 {
+  "description": "keep this as an example pls",
   "version": "0.0.0",
   "name": "@mono/c",
   "main": "./src/index.ts",
   "type": "module",
-  "devDependencies": {
+  "dependencies": {
     "@mono/tsconfig": "workspace:*",
-    "@mono/b": "workspace:*"
+    "@mono/utils": "workspace:*"
   }
 }

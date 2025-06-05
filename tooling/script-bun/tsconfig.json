@@ -1,0 +1,33 @@
+{
+  "extends": "@mono/tsconfig/base.json",
+  "exclude": [
+    "dist",
+    "node_modules",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "compilerOptions": {
+    "types": [
+      "@types/node",
+      "@types/bun"
+    ],
+    "lib": [
+      "ESNext",
+    ],
+    "rootDir": "src",
+    "outDir": "dist",
+    "target": "esnext",
+    "isolatedDeclarations": false,
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true
+  },
+  "references": [
+    {
+      "path": "../../packages/utils"
+    }
+  ]
+}

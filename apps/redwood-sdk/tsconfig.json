@@ -1,5 +1,5 @@
 {
-  "extends": "@mono/tsconfig",
+  "extends": "@mono/tsconfig/base.json",
   "compilerOptions": {
     "target": "es2021",
     "lib": [

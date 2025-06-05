@@ -1,8 +1,0 @@
-{
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "target": "es2022",
-    "declarationMap": false,
-    "emitDeclarationOnly": true,
-  }
-}

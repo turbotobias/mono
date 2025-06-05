@@ -16,10 +16,10 @@
       "path": "../../packages/a"
     },
     {
-      "path": "../../packages/b"
+      "path": "../../packages/c"
     },
     {
-      "path": "../../packages/c"
+      "path": "../../packages/utils"
     }
   ]
 }

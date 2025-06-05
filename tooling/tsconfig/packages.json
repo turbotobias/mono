@@ -1,0 +1,7 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": false,
+    "sourceMap": true
+  }
+}

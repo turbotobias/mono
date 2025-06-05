@@ -1,12 +1,12 @@
 {
-  // "extends": "./configs/config-tsconfig/tsconfig.base.json",
+  "extends": "@mono/tsconfig/base.json",
   "files": [],
   "references": [
     {
-      "path": "configs/bunup"
+      "path": "tooling/bunup"
     },
     {
-      "path": "configs/script-bun"
+      "path": "tooling/script-bun"
     },
     {
       "path": "apps/app-1"
@@ -18,10 +18,10 @@
       "path": "packages/a"
     },
     {
-      "path": "packages/b"
+      "path": "packages/c"
     },
     {
-      "path": "packages/c"
+      "path": "packages/utils"
     }
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "version": "0.0.0",
+  "name": "@mono/tsconfig",
+  "type": "module",
+  "files": [
+    "base.json",
+    "apps.json",
+    "packages.json",
+    "tests.json"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Strictest",
+  "compilerOptions": {
+    "types": [],
+    "lib": [
+      "ES2024",
+      "WebWorker"
+    ],
+    "target": "ES2024",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "isolatedDeclarations": true,
+    "noEmit": false,
+    "noEmitOnError": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "useDefineForClassFields": true,
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true
+  }
+}

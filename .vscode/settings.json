@@ -14,14 +14,13 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "nxConsole.generateAiAgentRules": true
   // TODO: uncomment or remove comments as needed
   // ---- typescript ----
   // "typescript.disableAutomaticTypeAcquisition": true,
   // "typescript.suggest.autoImports": true,
   // ---- oxc ----
   // "oxc.enable": true,
-  // "oxc.configPath": "../configs/lint/oxlint.json",
+  // "oxc.configPath": "../tooling/lint/oxlint.json",
   // ---- formatting ----
   // "editor.defaultFormatter": "oxc.oxc-vscode",
   // "[typescriptreact]": {

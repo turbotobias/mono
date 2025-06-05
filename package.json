@@ -1,34 +1,35 @@
 {
   "name": "mono",
-  "scripts": {
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "postinstall": "bun check-types",
-    "check-types": "tsc -b --incremental --extendedDiagnostics && update-ts-references --strict",
-    "build:bunup": "bunup --config ./configs/bunup/bunup.config.ts && bun check-types"
-  },
   "packageManager": "bun@1.2.15",
   "engines": {
     "node": "22.16.0",
     "bun": ">=1.2.15 <2"
   },
+  "scripts": {
+    "dev": "update-ts-references && turbo dev",
+    "lint": "turbo lint",
+    "postinstall": "bun check",
+    "check:old": "bun check && bun tsc",
+    "check": "update-ts-references",
+    "tsc": "tsc -b --incremental",
+    "build:bunup": "bunup --config ./tooling/bunup/bunup.config.ts && bun check-types"
+  },
   "workspaces": {
     "packages": [
-      "configs/*",
+      "tooling/*",
       "apps/*",
       "packages/*"
     ],
     "catalog": {
       "@types/bun": "^1.2.15",
+      "@types/node": "^22.15.29",
       "bunup": "^0.8.25",
       "typescript": "^5.8.3",
       "vite": "^6.3.5"
     }
   },
-  "devDependencies": {
-    "@mono/bunup": "workspace:*",
+  "dependencies": {
     "@mono/tsconfig": "workspace:*",
-    "@mono/script-bun": "workspace:*",
     "turbo": "^2.5.4",
     "update-ts-references": "^3.6.0"
   },
