@@ -1,2 +1,3 @@
 export * from "./clone-package"
-export * from "./files-dirs"
+export * from "./files-directories"
+

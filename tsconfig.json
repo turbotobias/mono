@@ -3,26 +3,25 @@
   "files": [],
   "references": [
     {
-      "path": "tooling/script-bun"
-    },
-    {
       "path": "tooling/bunup"
     },
     {
-      "path": "apps/redwood-sdk"
+      "path": "tooling/script-bun"
     },
     {
       "path": "apps/app"
     },
     {
-      "path": "packages/c"
+      "path": "apps/redwood-sdk"
     },
     {
       "path": "packages/a"
     },
     {
+      "path": "packages/c"
+    },
+    {
       "path": "packages/utils"
     }
-  ],
-  "compilerOptions": {}
+  ]
 }

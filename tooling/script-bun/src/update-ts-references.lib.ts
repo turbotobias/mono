@@ -246,8 +246,9 @@ const updateTsConfig = (
         assert.deepEqual(JSON.parse(JSON.stringify(config?.compilerOptions?.paths ?? {})), paths);
       }
       isEqual = true;
-    } catch (e) {
+    } catch (error) {
       // Changes needed
+      console.log("can not update ts config when merging references:", error)
     }
 
     if (!isEqual) {

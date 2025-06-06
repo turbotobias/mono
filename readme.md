@@ -1,8 +1,8 @@
-Draft for a vanillaer typescript monorepo
+Draft for a vanillaer monorepo using bun, turbo, and typescript project references
 
-- `/apps` to be deployed
-- `/packages` source code (TS references)
-- `/tooling` internal config, scripts, etc.
+- `/apps` are undled to be deployed
+- `/packages` are not bundled to be deployed
+- `/tooling` are not bundled nor deployed
 
 | what | thing |
 |----------|------------|
@@ -12,4 +12,3 @@ Draft for a vanillaer typescript monorepo
 | tests | bun |
 | typescript project references | update-ts-references |
 | task orchestration | turbo |
-| hosting | cloudflare |

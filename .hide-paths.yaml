@@ -1,0 +1,51 @@
+# any file listed here will be hidden in vscode explorer
+# any file from .gitignore is automatically hidden/included (only files in .gitignore are excluded from git)
+# any file from .gitignore with leading "-" is not included, like -fly.toml will be visible in vscode explorer
+
+# (the following directories are projects i am not working on currently, hence not worth the perf hit)
+# Toggle on/off projects you work on/off
+
+# don't hide these files
+-fly.toml
+
+# hide these files
+.cursorrules
+tests
+.vinxi
+tmp
+.wrangler
+routeTree.gen.ts
+tsr.config.json
+content-collections.ts
+rules-hidden.yaml
+rules-ai.yaml
+src/lib/components/svg/sports
+
+# hide these files always
+.windsurfignore
+.codeiumignore
+.cursorindexingignore
+.windsurfrules
+bun.lock
+worker-configuration.d.ts
+env.d.ts
+.gitignore
+.gitattributes
+package-lock.json
+.editorconfig
+.nvmrc
+.npmrc
+pnpm-lock.yaml
+sst-env.d.ts
+.expo
+expo-env.d.ts
+ios
+
+bunfig.toml
+app.d.ts
+components.json
+empty-module.ts
+postcss.config.js
+.cursorignore
+.vscodeignore
+deprecated
