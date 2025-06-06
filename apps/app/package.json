@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@mono/a": "workspace:*",
-    "@mono/c": "workspace:*",
     "@mono/tsconfig": "workspace:*",
     "@mono/utils": "workspace:*",
     "rwsdk": "catalog:",

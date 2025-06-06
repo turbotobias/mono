@@ -10,5 +10,13 @@
   ],
   "compilerOptions": {
     "isolatedDeclarations": false
-  }
+  },
+  "references": [
+    {
+      "path": "../a"
+    },
+    {
+      "path": "./tsconfig.build.json"
+    }
+  ]
 }

@@ -9,14 +9,12 @@
     "src/**/*"
   ],
   "compilerOptions": {
+    "rootDir": ".",
     "outDir": "dist"
   },
   "references": [
     {
       "path": "../../packages/a"
-    },
-    {
-      "path": "../../packages/c"
     },
     {
       "path": "../../packages/utils"

@@ -3,16 +3,14 @@
   "exclude": [
     "**/*.test.ts",
     "**/*.test.tsx",
-    "dist",
     "node_modules"
   ],
   "include": [
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*"
   ],
-  "references": [
-    {
-      "path": "./tsconfig.build.json"
-    }
-  ]
+  "compilerOptions": {
+    "rootDir": "src",
+    "tsBuildInfoFile": "dist/tsconfig.build.tsbuildinfo"
+  },
+  "references": []
 }

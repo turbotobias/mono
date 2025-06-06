@@ -33,7 +33,7 @@ export const defaultOptions: Options = {
   help: false,
   check: false,
   createPathMappings: false,
-  usecase: 'update-ts-references.yaml',
+  usecase: '.update-ts-project-refs.yaml',
   strict: false,
   ignoreReferencePaths: []
 };
@@ -210,7 +210,8 @@ const updateTsConfig = (
   check: boolean,
   createPathMappings = false,
   { packageDir }: { packageDir: string } = { packageDir: process.cwd() },
-  ignoreReferencePaths: string[] = []
+  ignoreReferencePaths: string[] = [],
+  verbose = false
 ): number => {
   const tsconfigFilePath = path.join(packageDir, configName);
 
@@ -241,14 +242,25 @@ const updateTsConfig = (
 
     let isEqual = false;
     try {
-      assert.deepEqual(JSON.parse(JSON.stringify(currentReferences)), mergedReferences);
+      // For equality check, we need to compare the expected final state
+      // Sort both arrays by path for consistent comparison
+      const sortByPath = (refs: any[]) => refs.slice().sort((a, b) => a.path.localeCompare(b.path));
+      const sortedCurrent = sortByPath(currentReferences);
+      const sortedMerged = sortByPath(mergedReferences);
+
+      assert.deepEqual(JSON.parse(JSON.stringify(sortedCurrent)), sortedMerged);
       if (createPathMappings) {
         assert.deepEqual(JSON.parse(JSON.stringify(config?.compilerOptions?.paths ?? {})), paths);
       }
       isEqual = true;
     } catch (error) {
-      // Changes needed
-      console.log("can not update ts config when merging references:", error)
+      // Changes needed - this is expected when references need updating
+      if (verbose) {
+        console.log("References need updating:", {
+          current: currentReferences.map((ref: any) => ref.path),
+          merged: mergedReferences.map((ref: any) => ref.path)
+        });
+      }
     }
 
     if (!isEqual) {
@@ -436,7 +448,8 @@ export const execute = async ({
         check,
         createPathMappings,
         packageEntry,
-        ignoreReferencePaths
+        ignoreReferencePaths,
+        verbose
       );
 
       changesCount += changeCount;
@@ -466,7 +479,8 @@ export const execute = async ({
       check,
       createPathMappings,
       { packageDir: cwd },
-      ignoreReferencePaths
+      ignoreReferencePaths,
+      verbose
     );
     changesCount += rootChangeCount;
   }

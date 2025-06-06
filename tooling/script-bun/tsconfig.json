@@ -4,7 +4,8 @@
     "dist",
     "node_modules",
     "**/*.test.ts",
-    "**/*.test.tsx"
+    "**/*.test.tsx",
+    ".turbo",
   ],
   "include": [
     "**/*.ts",
@@ -19,7 +20,7 @@
       "ESNext",
       "WebWorker",
     ],
-    "rootDir": "src",
+    "rootDir": ".",
     "outDir": "dist",
     "target": "esnext",
     "isolatedDeclarations": false,

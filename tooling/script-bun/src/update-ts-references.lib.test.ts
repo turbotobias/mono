@@ -114,7 +114,7 @@ describe("update-ts-references with ignore paths support", () => {
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: "update-ts-references.yaml",
+      usecase: ".update-ts-project-refs.yaml",
       strict: false,
       ignoreReferencePaths: ["../../external-lib"]
     };
@@ -149,7 +149,7 @@ describe("update-ts-references with ignore paths support", () => {
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: "update-ts-references.yaml",
+      usecase: ".update-ts-project-refs.yaml",
       strict: false,
       ignoreReferencePaths: ["../../external-lib"] // only preserve this one
     };
@@ -185,7 +185,7 @@ describe("update-ts-references with ignore paths support", () => {
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: "update-ts-references.yaml",
+      usecase: ".update-ts-project-refs.yaml",
       strict: false,
       ignoreReferencePaths: ["../../external-lib", "../../another-external"]
     };
@@ -219,7 +219,7 @@ describe("update-ts-references with ignore paths support", () => {
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: "update-ts-references.yaml",
+      usecase: ".update-ts-project-refs.yaml",
       strict: false,
       ignoreReferencePaths: []
     };
@@ -249,7 +249,7 @@ describe("update-ts-references with ignore paths support", () => {
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: "update-ts-references.yaml",
+      usecase: ".update-ts-project-refs.yaml",
       strict: false
       // ignoreReferencePaths not provided
     };
@@ -271,7 +271,7 @@ ignoreReferencePaths:
   - ../../external-lib
   - ../../another-external
 `;
-    fs.writeFileSync(path.join(testWorkspaceDir, "update-ts-references.yaml"), yamlConfig);
+    fs.writeFileSync(path.join(testWorkspaceDir, ".update-ts-project-refs.yaml"), yamlConfig);
 
     createTsConfig("packages/pkg-a", [
       { path: "../pkg-b" },
@@ -291,7 +291,7 @@ ignoreReferencePaths:
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: "update-ts-references.yaml",
+      usecase: ".update-ts-project-refs.yaml",
       strict: false
     };
 
@@ -305,5 +305,67 @@ ignoreReferencePaths:
     expect(referencePaths).toContain("../../external-lib");
     expect(referencePaths).toContain("../../another-external");
     expect(referencePaths).not.toContain("../../should-be-removed");
+  });
+
+  it("should handle relative path matching correctly", async () => {
+    // Test case that reproduces the issue from the error message
+    // Where CLI uses "./tsconfig.build.json" but file has "../tsconfig.build.json"
+    createTsConfig("packages/pkg-a", [
+      { path: "../pkg-b" },
+      { path: "../tsconfig.build.json" }  // This exists in the tsconfig
+    ]);
+    createTsConfig("packages/pkg-b");
+
+    const options = {
+      configName: "tsconfig.json",
+      rootConfigName: "tsconfig.json",
+      withoutRootConfig: true,
+      createTsConfig: false,
+      cwd: testWorkspaceDir,
+      verbose: false,
+      help: false,
+      check: false,
+      createPathMappings: false,
+      usecase: ".update-ts-project-refs.yaml",
+      strict: false,
+      ignoreReferencePaths: ["./tsconfig.build.json", "../tsconfig.build.json"] // Both variations
+    };
+
+    await execute(options);
+
+    const pkgAConfig = parse(fs.readFileSync(path.join(testWorkspaceDir, "packages/pkg-a/tsconfig.json"), "utf8")) as any;
+    expect(pkgAConfig.references).toHaveLength(2);
+
+    const referencePaths = pkgAConfig.references.map((ref: any) => ref.path);
+    expect(referencePaths).toContain("../pkg-b");
+    expect(referencePaths).toContain("../tsconfig.build.json");
+  });
+
+  it("should not throw assertion errors in check mode with preserved references", async () => {
+    // Test case for check mode specifically
+    createTsConfig("packages/pkg-a", [
+      { path: "../pkg-b" },
+      { path: "../tsconfig.build.json" }
+    ]);
+    createTsConfig("packages/pkg-b");
+
+    const options = {
+      configName: "tsconfig.json",
+      rootConfigName: "tsconfig.json",
+      withoutRootConfig: true,
+      createTsConfig: false,
+      cwd: testWorkspaceDir,
+      verbose: false,
+      help: false,
+      check: true, // This is the key - check mode should not throw
+      createPathMappings: false,
+      usecase: ".update-ts-project-refs.yaml",
+      strict: false,
+      ignoreReferencePaths: ["../tsconfig.build.json"]
+    };
+
+    // This should not throw an error
+    const changesCount = await execute(options);
+    expect(changesCount).toBe(0); // No changes should be detected
   });
 });

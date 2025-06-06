@@ -32,4 +32,24 @@
   // "[json]": {
   //   "editor.defaultFormatter": "oxc.oxc-vscode"
   // },
+  "files.exclude": {
+    "**/bun.lock": false,
+    "**/dist": false,
+    "**/tests": false,
+    "**/tmp": false,
+    "**/.wrangler": false,
+    "**/.hide-paths.yaml": false,
+    "**/.update-ts-project-refs.yaml": false,
+    "**/.turbo": false,
+    "**/.gitignore": false,
+    "**/.cursorignore": false,
+    "**/.cursorindexingignore": false,
+    "**/.gitattributes": false,
+    "**/.editorconfig": false,
+    "**/.nvmrc": false,
+    "**/.npmrc": false,
+    "**/.pnpm-lock.yaml": false,
+    "**/tsconfig.tsbuildinfo": false,
+    "**/node_modules": false
+  }
 }
