@@ -114,7 +114,7 @@ describe("update-ts-references with ignore paths support", () => {
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: ".update-ts-project-refs.yaml",
+      usecase: "update-ts-refs.yaml",
       strict: false,
       ignoreReferencePaths: ["../../external-lib"]
     };
@@ -149,7 +149,7 @@ describe("update-ts-references with ignore paths support", () => {
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: ".update-ts-project-refs.yaml",
+      usecase: "update-ts-refs.yaml",
       strict: false,
       ignoreReferencePaths: ["../../external-lib"] // only preserve this one
     };
@@ -185,7 +185,7 @@ describe("update-ts-references with ignore paths support", () => {
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: ".update-ts-project-refs.yaml",
+      usecase: "update-ts-refs.yaml",
       strict: false,
       ignoreReferencePaths: ["../../external-lib", "../../another-external"]
     };
@@ -219,7 +219,7 @@ describe("update-ts-references with ignore paths support", () => {
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: ".update-ts-project-refs.yaml",
+      usecase: "update-ts-refs.yaml",
       strict: false,
       ignoreReferencePaths: []
     };
@@ -249,7 +249,7 @@ describe("update-ts-references with ignore paths support", () => {
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: ".update-ts-project-refs.yaml",
+      usecase: "update-ts-refs.yaml",
       strict: false
       // ignoreReferencePaths not provided
     };
@@ -271,7 +271,7 @@ ignoreReferencePaths:
   - ../../external-lib
   - ../../another-external
 `;
-    fs.writeFileSync(path.join(testWorkspaceDir, ".update-ts-project-refs.yaml"), yamlConfig);
+    fs.writeFileSync(path.join(testWorkspaceDir, "update-ts-refs.yaml"), yamlConfig);
 
     createTsConfig("packages/pkg-a", [
       { path: "../pkg-b" },
@@ -291,7 +291,7 @@ ignoreReferencePaths:
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: ".update-ts-project-refs.yaml",
+      usecase: "update-ts-refs.yaml",
       strict: false
     };
 
@@ -326,7 +326,7 @@ ignoreReferencePaths:
       help: false,
       check: false,
       createPathMappings: false,
-      usecase: ".update-ts-project-refs.yaml",
+      usecase: "update-ts-refs.yaml",
       strict: false,
       ignoreReferencePaths: ["./tsconfig.build.json", "../tsconfig.build.json"] // Both variations
     };
@@ -359,7 +359,7 @@ ignoreReferencePaths:
       help: false,
       check: true, // This is the key - check mode should not throw
       createPathMappings: false,
-      usecase: ".update-ts-project-refs.yaml",
+      usecase: "update-ts-refs.yaml",
       strict: false,
       ignoreReferencePaths: ["../tsconfig.build.json"]
     };

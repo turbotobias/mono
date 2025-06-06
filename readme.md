@@ -1,8 +1,8 @@
 Draft for a vanillaer monorepo using bun, turbo, and typescript project references
 
-- `/apps` are undled to be deployed
-- `/packages` are not bundled to be deployed
-- `/tooling` are not bundled nor deployed
+- `/apps` are bundled and to be deployed
+- `/packages` are not bundled and to be deployed
+- `/tooling` are not bundled nor to be deployed
 
 | what | thing |
 |----------|------------|

@@ -33,7 +33,7 @@ export const defaultOptions: Options = {
   help: false,
   check: false,
   createPathMappings: false,
-  usecase: '.update-ts-project-refs.yaml',
+  usecase: 'update-ts-refs.yaml',
   strict: false,
   ignoreReferencePaths: []
 };
