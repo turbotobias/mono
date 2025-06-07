@@ -10,11 +10,6 @@
     "**/*.ts",
     "**/*.tsx"
   ],
-  "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "src",
-    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
-  },
   "references": [
     {
       "path": "../c"

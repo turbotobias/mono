@@ -1,13 +1,15 @@
 {
   "extends": "./base.json",
   "compilerOptions": {
+    "types": [
+      "@types/bun"
+    ],
+    "outDir": "${configDir}/dist",
+    "rootDir": "${configDir}/src",
     "noEmit": true,
     "strict": false,
     "isolatedModules": false,
     "isolatedDeclarations": false,
-    "disableSolutionSearching": true,
-    "types": [
-      "@types/bun"
-    ]
+    "disableSolutionSearching": true
   }
 }

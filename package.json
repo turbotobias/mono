@@ -9,14 +9,14 @@
     "dev": "bun i && turbo dev",
     "build": "bun i && turbo build",
     "lint": "turbo lint",
-    "check": "bun run tooling/script-bun/src/update-ts-references.ts --ignoreReferencePaths ./tsconfig.build.json && bun tsc",
+    "check": "bun run tools/script-bun/src/update-ts-references.ts --ignoreReferencePaths ./tsconfig.build.json && bun tsc",
     "tsc": "tsc -b --incremental",
-    "build:bunup": "bunup --config ./tooling/bunup/bunup.config.ts && bun check",
+    "build:bunup": "bunup --config ./tools/bunup/bunup.config.ts && bun check",
     "postinstall": "bun check"
   },
   "workspaces": {
     "packages": [
-      "tooling/*",
+      "tools/*",
       "apps/*",
       "packages/*"
     ],
@@ -26,13 +26,13 @@
       "bunup": "^0.8.25",
       "typescript": "^5.8.3",
       "vite": "^6.3.5",
-      "wrangler": "^4.19.1",
-      "rwsdk": "^0.1.0-alpha.3"
+      "wrangler": "^4.19.1"
     }
   },
   "dependencies": {
     "@mono/tsconfig": "workspace:*",
-    "turbo": "^2.5.4"
+    "turbo": "^2.5.4",
+    "rwsdk": "^0.1.0-alpha.3"
   },
   "version": "0.0.0"
 }

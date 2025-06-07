@@ -3,10 +3,10 @@
   "files": [],
   "references": [
     {
-      "path": "tooling/script-bun"
+      "path": "tools/script-bun"
     },
     {
-      "path": "tooling/bunup"
+      "path": "tools/bunup"
     },
     {
       "path": "apps/redwood-sdk"
@@ -23,6 +23,5 @@
     {
       "path": "packages/utils"
     }
-  ],
-  "compilerOptions": {}
+  ]
 }

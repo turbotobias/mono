@@ -20,7 +20,7 @@
   // "typescript.suggest.autoImports": true,
   // ---- oxc ----
   // "oxc.enable": true,
-  // "oxc.configPath": "../tooling/lint/oxlint.json",
+  // "oxc.configPath": "../tools/lint/oxlint.json",
   // ---- formatting ----
   // "editor.defaultFormatter": "oxc.oxc-vscode",
   // "[typescriptreact]": {

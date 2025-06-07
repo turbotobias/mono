@@ -1,5 +1,5 @@
 {
-  "extends": "@mono/tsconfig/packages.json",
+  "extends": "@mono/tsconfig/packages.build.json",
   "exclude": [
     "**/*.test.ts",
     "**/*.test.tsx",
@@ -8,9 +8,5 @@
   "include": [
     "src/**/*"
   ],
-  "compilerOptions": {
-    "rootDir": "src",
-    "tsBuildInfoFile": "dist/tsconfig.build.tsbuildinfo"
-  },
   "references": []
 }

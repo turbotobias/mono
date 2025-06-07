@@ -4,6 +4,7 @@
     "emitDeclarationOnly": false,
     "sourceMap": true,
     "outDir": "${configDir}/dist",
-    "tsBuildInfoFile": "${configDir}/dist/tsconfig.tsbuildinfo"
+    "rootDir": "${configDir}/src",
+    "tsBuildInfoFile": "${configDir}/dist/tsconfig.build.tsbuildinfo"
   }
 }
