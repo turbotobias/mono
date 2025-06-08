@@ -1,0 +1,20 @@
+{
+  "extends": "../../tools/tsconfig/packages.json",
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    ".turbo",
+    "node_modules"
+  ],
+  "include": [
+    "./index.ts"
+  ],
+  "compilerOptions": {
+    "isolatedDeclarations": false
+  },
+  "references": [
+    {
+      "path": "./tsconfig.build.json"
+    }
+  ]
+}

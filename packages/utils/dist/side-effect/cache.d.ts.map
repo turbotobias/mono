@@ -1,1 +1,0 @@
-{"version":3,"file":"cache.d.ts","sourceRoot":"","sources":["../../src/side-effect/cache.ts"],"names":[],"mappings":"AAAA;;GAEG;AAEH;;;;;;GAMG;AACH,qBAAa,UAAU,CAAC,CAAC;;gBAKT,KAAK,EAAE,MAAM;IAazB,GAAG,CAAC,GAAG,EAAE,MAAM,EAAE,KAAK,EAAE,CAAC,GAAG,IAAI;IAKhC,GAAG,CAAC,GAAG,EAAE,MAAM,GAAG,CAAC,GAAG,SAAS;IAS/B,OAAO,IAAI,IAAI;CAIlB"}

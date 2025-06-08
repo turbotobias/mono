@@ -3,4 +3,4 @@ bun.lock
 **/*.tsbuildinfo
 tsconfig.tsbuildinfo
 .turbo/
-dist
+**/dist/

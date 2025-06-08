@@ -1,0 +1,5 @@
+{
+  "extends": "../../tools/tsconfig/tests.json",
+  "exclude": ["dist", ".turbo", "node_modules"],
+  "include": ["**/*.test.ts", "**/*.test.tsx"]
+}

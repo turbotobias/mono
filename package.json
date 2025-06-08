@@ -7,9 +7,10 @@
   },
   "scripts": {
     "dev": "bun i && turbo dev",
+    "gen": "bun run tools/script-bun/src/gen.ts",
     "build": "bun i && turbo build",
     "lint": "turbo lint",
-    "check": "bun run tools/script-bun/src/update-ts-references.ts --ignoreReferencePaths ./tsconfig.build.json && bun tsc -b",
+    "check": "bun run tools/script-bun/src/update-ts-references.ts --ignoreReferencePaths ./tsconfig.build.json && bun tsc -b --noEmit",
     "tsc": "tsc -b --incremental",
     "build:bunup": "bunup --config ./tools/bunup/bunup.config.ts && bun check",
     "reinstall": "bun run tools/script-bun/src/delete-tmp-files-dirs.ts . && bun pm cache rm && bun i",

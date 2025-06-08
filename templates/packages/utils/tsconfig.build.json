@@ -1,0 +1,15 @@
+{
+  "extends": "../../tools/tsconfig/packages.build.json",
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "dist",
+    ".turbo",
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "references": []
+}
