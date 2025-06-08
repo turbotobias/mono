@@ -1,0 +1,11 @@
+{
+  "extends": "@mono/tsconfig/tests.json",
+  "exclude": [
+    "dist",
+    "node_modules",
+  ],
+  "include": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+  ]
+}

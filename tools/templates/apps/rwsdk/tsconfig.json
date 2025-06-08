@@ -9,13 +9,5 @@
   "include": [
     "vite.config.mts",
     "src/**/*"
-  ],
-  "references": [
-    {
-      "path": "../../packages/a"
-    },
-    {
-      "path": "../../packages/utils"
-    }
   ]
 }

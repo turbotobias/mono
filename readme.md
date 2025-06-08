@@ -1,10 +1,10 @@
-Draft for a vanillaer monorepo using bun, turbo, and typescript project references
+Draft for a vanillaer monorepo using typescript project references, bun, and turbo
 
 - `/apps` are bundled and to be deployed
-- `/packages` are not bundled but to be deployed
+- `/packages` are not bundled and to be deployed
 - `/tools` are not bundled nor to be deployed
 
-| what | thing |
+| What | Thing |
 |----------|------------|
 | scripts | bun |
 | workspaces (+ catalogs) | bun |

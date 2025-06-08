@@ -4,6 +4,8 @@
     "target": "es2022",
     "declarationMap": true,
     "emitDeclarationOnly": true,
-    "isolatedDeclarations": false
+    "isolatedDeclarations": false,
+    "rootDir": "${configDir}",
+    "outDir": "${configDir}/dist"
   }
 }

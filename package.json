@@ -12,7 +12,12 @@
     "check": "bun run tools/script-bun/src/update-ts-references.ts --ignoreReferencePaths ./tsconfig.build.json && bun tsc",
     "tsc": "tsc -b --incremental",
     "build:bunup": "bunup --config ./tools/bunup/bunup.config.ts && bun check",
-    "postinstall": "bun check"
+    "postinstall": "bun check",
+    "test:dev": "bun i && turbo dev --filter=!@mono/redwood-sdk",
+    "test:build": "bun i && turbo build --filter=!@mono/redwood-sdk",
+    "test:lint": "bun i && turbo lint --filter=!@mono/redwood-sdk",
+    "test:check": "bun i && turbo check --filter=!@mono/redwood-sdk",
+    "test:tsc": "bun i && turbo tsc --filter=!@mono/redwood-sdk"
   },
   "workspaces": {
     "packages": [

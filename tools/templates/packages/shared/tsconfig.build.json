@@ -1,0 +1,12 @@
+{
+  "extends": "@mono/tsconfig/packages.build.json",
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "node_modules"
+  ],
+  "include": [
+    "src/**/*"
+  ],
+  "references": []
+}

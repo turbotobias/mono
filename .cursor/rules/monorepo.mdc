@@ -1,0 +1,20 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+This monorepo uses TypeScript Project References and tsc to build both JavaScript and declaration (.d.ts) files in projects
+
+A project is any directory with both a package.json and a tsconfig.json, except the root directory
+
+Turbo is used to orchestrate (package.json script) tasks across packages
+
+The configuration is primarily in tsconfig (emitting JS and .d.ts files), and package.json exports fields, which are responsible for handing off types and modules to consuming projects:
+- tsconfig: tools/tsconfig/*.json
+- packages/**/package.json — exports and dev/build/check/format/lint scripts
+
+Guidelines for automated suggestions:
+- Do not modify any build-related configuration or tooling (including TypeScript, Turbo, update-ts-refs, Vite, etc.)
+- Only suggest changes to TypeScript or Turbo configuration if strictly necessary—and never apply changes directly
+- Do not modify or restructure anything related to the monorepo's build system, workspace layout, or tooling unless explicitly required to resolve a critical issue
+- Focus suggestions strictly on relevant application-level logic, leaving infrastructure untouched unless absolutely unavoidable

@@ -1,0 +1,17 @@
+{
+  "version": "0.0.0",
+  "name": "@mono/<NAME>",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@mono/a": "workspace:*",
+    "@mono/tsconfig": "workspace:*",
+    "@mono/utils": "workspace:*",
+    "rwsdk": "catalog:",
+    "vite": "catalog:",
+    "wrangler": "catalog:"
+  }
+}

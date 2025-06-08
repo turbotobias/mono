@@ -5,7 +5,8 @@
   "files": [
     "base.json",
     "apps.json",
+    "tests.json",
     "packages.json",
-    "tests.json"
+    "packages.build.json"
   ]
 }

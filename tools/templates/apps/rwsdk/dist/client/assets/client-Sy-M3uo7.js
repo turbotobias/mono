@@ -1,0 +1,2 @@
+let i=new TextEncoder,e,o=new ReadableStream({start(n){if(typeof window>"u")return;let t=d=>{typeof d=="string"?n.enqueue(i.encode(d)):n.enqueue(d)};window.__FLIGHT_DATA||(window.__FLIGHT_DATA=[]),window.__FLIGHT_DATA.forEach(t),window.__FLIGHT_DATA.push=d=>{t(d)},e=n}});typeof document<"u"&&document.readyState==="loading"?document.addEventListener("DOMContentLoaded",()=>{e==null||e.close()}):e==null||e.close();export{o as rscStream};
+//# sourceMappingURL=client-Sy-M3uo7.js.map
