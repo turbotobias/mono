@@ -1,0 +1,39 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# Comment Rules
+
+## Goal
+Communicate **why / what**; never explain **how**.
+
+## Rules
+1. **Intent, not mechanics** – e.g. “fill missing value or count up”.
+2. **Signal branches** – highlight divergent paths.
+3. **Brief** – one line preferred.
+4. **Plain language** – minimal jargon.
+5. **Stay in sync** – update or delete when code changes.
+6. **Formatting**
+   - `/** … */` for docs that follow identifiers (IntelliSense).
+   - `//` for throw-away inline notes.
+   - Prefix AI text with `(ai)`.
+7. **Stand-alone** – meaningful in isolation.
+
+### Good
+```ts
+/**
+ * persist user preferences
+ * create_array(3)      → [0,1,2]
+ * create_array(3,"x")  → ["x","x","x"]
+ */
+function create_array(length, value) {...}
+```
+
+Bad
+```ts
+// takes two arguments and returns sum
+function sum(a, b) {...}
+
+/** user used by other code */
+```

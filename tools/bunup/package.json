@@ -2,17 +2,16 @@
   "version": "0.0.0",
   "name": "@mono/bunup",
   "type": "module",
-  "main": "./bunup.config.ts",
+  "main": "./src/bunup.config.ts",
   "scripts": {
     "dev": "tsc -p ./tsconfig.json --watch",
     "build": "tsc -p ./tsconfig.json"
   },
   "dependencies": {
-    "bunup": "catalog:",
-    "@mono/tsconfig": "workspace:*"
+    "bunup": "catalog:"
   },
   "exports": {
-    ".": "./bunup.config.ts",
-    "./utils": "./bunup.config.utils.ts"
+    ".": "./src/bunup.config.ts",
+    "./utils": "./src/bunup.config.utils.ts"
   }
 }

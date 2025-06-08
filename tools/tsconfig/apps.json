@@ -5,7 +5,6 @@
     "declarationMap": true,
     "emitDeclarationOnly": true,
     "isolatedDeclarations": false,
-    "rootDir": "${configDir}",
-    "outDir": "${configDir}/dist"
+    "rootDir": "${configDir}"
   }
 }

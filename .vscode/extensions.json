@@ -1,21 +1,18 @@
 {
   // TODO: uncomment or remove comments as needed
   "recommendations": [
-
     // ==== required ====
     "oxc.oxc-vscode", // lint/format
     // "dbaeumer.vscode-eslint", // lint/format what oxc can't
     // "biomejs.biome",  // lint/format what oxc/eslint can't
-
     // ==== optional ====
     "oven.bun-vscode", // script overview
     "adrianwilczynski.toggle-hidden",
-    
+    "eliostruyf.vscode-typescript-exportallmodules",
     // ---- tailwind ----
     // "bradlc.vscode-tailwindcss",
     // "esbenp.prettier-vscode",
     // "starbist.oklchanger",
-
     // ---- markdown preview ----
     // "yzhang.markdown-all-in-one"
   ]

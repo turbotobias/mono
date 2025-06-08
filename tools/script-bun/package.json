@@ -9,12 +9,12 @@
   },
   "dependencies": {
     "@types/bun": "catalog:",
-    "@mono/tsconfig": "workspace:*",
     "@mono/utils": "workspace:*",
     "@types/js-yaml": "^4.0.9",
     "@types/minimatch": "^5.1.2",
     "js-yaml": "^4.1.0",
     "minimatch": "^9.0.4",
-    "comment-json": "^4.2.4"
+    "comment-json": "^4.2.4",
+    "trash": "^8.1.1"
   }
 }

@@ -1,5 +1,18 @@
 {
-  "extends": "@mono/tsconfig/base.json",
+  "extends": "../../tools/tsconfig/apps.json",
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "dist",
+    ".turbo",
+    "node_modules",
+    "generated",
+    ".cursor"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
   "compilerOptions": {
     "target": "es2021",
     "lib": [

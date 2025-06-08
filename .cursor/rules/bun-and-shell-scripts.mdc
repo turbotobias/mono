@@ -1,0 +1,39 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# Bun & shell scripts
+
+## Runtime
+Everything runs under Bun. Use Node only if Bun is impossible.
+
+## CLI Cheatsheet
+
+| Action | Command |
+|--------|---------|
+| Run file | `bun <file>` |
+| Tests | `bun test` |
+| Build bundle | `bun build <entry>` |
+| Install deps | `bun install` |
+| Run script | `bun run <script>` |
+| Delete paths | `trash <target>` |
+| Remote tool | `bunx <pkg> …` |
+| Local tool | `bun x <pkg> …` |
+
+## Preferred APIs
+- HTTP/WebSocket – `Bun.serve()`
+- SQLite – `bun:sqlite`
+- Redis – `Bun.redis`
+- Postgres – `Bun.sql`
+- Shell – `Bun.$\cmd``
+
+## Front-end Quick-start
+```ts
+// index.tsx
+import index from "./index.html"
+Bun.serve({
+  routes: { "/": index },
+  development: { hmr: true, console: true }
+})
+```

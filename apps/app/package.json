@@ -7,8 +7,6 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@mono/a": "workspace:*",
-    "@mono/tsconfig": "workspace:*",
     "@mono/utils": "workspace:*",
     "rwsdk": "catalog:",
     "vite": "catalog:",

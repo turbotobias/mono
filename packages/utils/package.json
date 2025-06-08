@@ -5,15 +5,18 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     }
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "dev": "tsc -p tsconfig.json --watch"
   },
-  "dependencies": {
-    "@mono/tsconfig": "workspace:*"
+  "devDependencies": {
+    "@types/geojson": "^7946.0.16",
+    "geojson": "^0.5.0",
+    "countries-and-timezones": "^3.8.0",
+    "date-fns": "4.1.0"
   }
 }

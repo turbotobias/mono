@@ -4,7 +4,6 @@
     "types": [
       "@types/bun"
     ],
-    "outDir": "${configDir}/dist",
     "rootDir": "${configDir}/src",
     "noEmit": true,
     "strict": false,

@@ -54,7 +54,7 @@ Copy the database ID provided and paste it into your project's `wrangler.jsonc` 
 
 ### Authentication Setup
 
-For authentication setup and configuration, including optional bot protection, see the [Authentication Documentation](https://docs.rwsdk.com/core/authentication).
+For authentication setup and configuration, including optional bot protection, see the [Authentication Documentation](https://docs.rwsdk.com/utils/authentication).
 
 ## Further Reading
 

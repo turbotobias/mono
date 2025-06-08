@@ -1,10 +1,6 @@
 {
-  "extends": "./base.json",
+  "extends": "./packages.json",
   "compilerOptions": {
-    "emitDeclarationOnly": false,
-    "sourceMap": true,
-    "outDir": "${configDir}/dist",
-    "rootDir": "${configDir}/src",
     "tsBuildInfoFile": "${configDir}/dist/tsconfig.build.tsbuildinfo"
   }
 }

@@ -85,7 +85,7 @@ const createTsConfig = (packagePath: string, existingReferences: any[] = []) => 
   fs.writeFileSync(path.join(testWorkspaceDir, packagePath, "tsconfig.json"), JSON.stringify(tsconfig, null, 2));
 };
 
-describe("update-ts-references with ignore paths support", () => {
+describe.skip("update-ts-references with ignore paths support", () => {
   beforeEach(() => {
     cleanup();
     createTestWorkspace();

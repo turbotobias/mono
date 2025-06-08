@@ -1,16 +1,12 @@
 {
-  "extends": "@mono/tsconfig/tests.json",
+  "extends": "../../tools/tsconfig/tests.json",
   "exclude": [
     "dist",
-    "node_modules",
+    ".turbo",
+    "node_modules"
   ],
   "include": [
     "**/*.test.ts",
     "**/*.test.tsx",
-  ],
-  "compilerOptions": {
-    "noEmit": true,
-    "outDir": "dist",
-    "rootDir": "src"
-  }
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "extends": "@mono/tsconfig/base.json",
+  "extends": "./tools/tsconfig/base.json",
   "files": [],
   "references": [
     {
@@ -13,12 +13,6 @@
     },
     {
       "path": "apps/app"
-    },
-    {
-      "path": "packages/c"
-    },
-    {
-      "path": "packages/a"
     },
     {
       "path": "packages/utils"

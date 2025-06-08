@@ -1,32 +1,5 @@
 {
-  "extends": "@mono/tsconfig/base.json",
-  "exclude": [
-    "dist",
-    "node_modules",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    ".turbo",
-  ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "compilerOptions": {
-    "types": [
-      "@types/node",
-      "@types/bun"
-    ],
-    "lib": [
-      "ESNext",
-      "WebWorker",
-    ],
-    "rootDir": ".",
-    "outDir": "dist",
-    "target": "esnext",
-    "isolatedDeclarations": false,
-    "emitDeclarationOnly": true,
-    "allowImportingTsExtensions": true
-  },
+  "extends": "../tsconfig/tools.json",
   "references": [
     {
       "path": "../../packages/utils"

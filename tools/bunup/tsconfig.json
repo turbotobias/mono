@@ -1,8 +1,14 @@
 {
-  "extends": "@mono/tsconfig/base.json",
-  "compilerOptions": {
-    "isolatedDeclarations": false,
-    "emitDeclarationOnly": true,
-    "outDir": "dist"
-  }
+  "extends": "../tsconfig/tools.json",
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "dist",
+    ".turbo",
+    "node_modules"
+  ],
+  "includes": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
 }

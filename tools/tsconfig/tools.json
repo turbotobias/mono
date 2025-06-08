@@ -1,0 +1,14 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "types": [
+      "@types/bun"
+    ],
+    "rootDir": "${configDir}/src",
+    "outDir": "${configDir}/dist",
+    "tsBuildInfoFile": "${configDir}/dist/tsconfig.tsbuildinfo",
+    "isolatedDeclarations": false,
+    "emitDeclarationOnly": true,
+    "sourceMap": true
+  }
+}

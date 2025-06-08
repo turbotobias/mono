@@ -1,20 +1,18 @@
 {
-  "extends": "@mono/tsconfig/packages.json",
+  "extends": "../../tools/tsconfig/packages.json",
   "exclude": [
     "**/*.test.ts",
     "**/*.test.tsx",
+    ".turbo",
     "node_modules"
   ],
   "include": [
-    "src/**/*"
+    "./index.ts"
   ],
   "compilerOptions": {
     "isolatedDeclarations": false
   },
   "references": [
-    {
-      "path": "../a"
-    },
     {
       "path": "./tsconfig.build.json"
     }

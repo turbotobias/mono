@@ -1,0 +1,39 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# Code Principles
+
+## Purpose
+Single source of truth for behaviour, style, and risk control.
+
+## Priority
+1. **Safety** – no runtime/type errors, no unhandled edges.
+2. **Simplicity & Reliability** – shortest path, least magic.
+3. **Performance & Adaptability** – optimise only after proof.
+4. **Readability** – clarity beats cleverness.
+
+## Working Rules
+- Start from existing code/patterns; create new only when unavoidable.
+- Clarify ambiguities before coding.
+- Stick to local `package.json` deps; justify any addition.
+- 100 % strict-mode TypeScript; any cast needs a one-line reason.
+- Prefer in-place refactor over parallel implementations.
+- Avoid global state; pass data explicitly.
+
+## Naming
+| Item                      | Case / Form                   | Example           |
+|---------------------------|-------------------------------|-------------------|
+| Vars / props / funcs      | `snake_case`                  | `user_id`         |
+| Files                     | `kebab-case`                  | `user-avatar.ts`  |
+| Custom types              | `PascalCase`, prefix **T**    | `TImage`          |
+| External APIs             | Keep source casing            | `ReactNode`       |
+| AI comments               | Prefix `(ai)`                 | `(ai) memoize`    |
+
+## Imports
+- Runtime imports resolve via `exports` fields.
+- Tests (`*.test.ts[x]`) use `@tsconfig.test.json`.
+
+## Shell & Scripting
+See **bun-scripts.mdc**.

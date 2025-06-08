@@ -1,19 +1,18 @@
 {
-  "extends": "@mono/tsconfig/apps.json",
+  "extends": "../../tools/tsconfig/apps.json",
   "exclude": [
-    "**/node_modules",
-    "**/dist",
+    "node_modules",
+    "dist",
     ".wrangler",
-    ".turbo"
+    ".turbo",
+    "*.tsbuildinfo"
   ],
   "include": [
     "vite.config.mts",
-    "src/**/*"
+    "**/*.ts",
+    "**/*.tsx"
   ],
   "references": [
-    {
-      "path": "../../packages/a"
-    },
     {
       "path": "../../packages/utils"
     }

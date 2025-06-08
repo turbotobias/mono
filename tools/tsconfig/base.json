@@ -4,9 +4,11 @@
     "types": [],
     "lib": [
       "ES2024",
-      "WebWorker"
+      "WebWorker",
+      "DOM",
+      "DOM.Iterable"
     ],
-    "target": "ES2024",
+    "target": "ESNext",
     "module": "ESNext",
     "moduleDetection": "force",
     "moduleResolution": "bundler",
