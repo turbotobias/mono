@@ -16,5 +16,17 @@
     {
       "path": "../../packages/utils"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "types": [
+      "./types/worker.d.ts",
+      "./types/rw.d.ts",
+      "./types/vite.d.ts"
+    ],
+    "paths": {
+      "~/*": [
+        "./src/app/*"
+      ]
+    }
+  }
 }

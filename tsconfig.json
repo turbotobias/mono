@@ -1,14 +1,6 @@
 {
   "extends": "./tools/tsconfig/base.json",
   "files": [],
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".wrangler",
-    ".turbo",
-    "*.tsbuildinfo",
-    "templates"
-  ],
   "references": [
     {
       "path": "tools/test-browser"
@@ -25,6 +17,5 @@
     {
       "path": "packages/utils"
     }
-  ],
-  "compilerOptions": {}
+  ]
 }

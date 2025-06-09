@@ -1,33 +1,42 @@
-import { get_date_time_now } from "@mono/utils";
-import { render, route } from "rwsdk/router";
+import { get_date_time_now_with_seconds } from "@mono/utils";
+import { index, render } from "rwsdk/router";
 import { defineApp } from "rwsdk/worker";
-import { Document } from "./app/Document";
+import { Document } from "~/Document";
+import { setCommonHeaders } from "~/headers";
+
+//function useMounted() {
+//  const [is_mounted, set_is_mounted] = React.useState(false)
+//  React.useEffect(() => {
+//    set_is_mounted(true)
+//  }, [])
+//  return is_mounted
+//}
 
 export default defineApp([
-  render(Document, [
-    route("/", () => new Response(`/ [Document]`)),
-    route("/ping", function ({ request }) {
-      return (
-        <>
-          <p>{get_date_time_now()}</p>
-          <a href="/ping">Ping!</a>
-          <a href="/pong">Pong!</a>
-          <p>{request.url}</p>
-        </>
-      );
-    }),
-    route("/pong", function ({ request }) {
-      return (
-        <>
-          <p>
-            {get_date_time_now()}
-          </p>
-          <a href="/ping">Ping!</a>
-          <a href="/pong">Pong!</a>
-          <p>{request.url}</p>
-        </>
-      );
-    }),
-  ]),
-  route("/", () => new Response(`/`)),
-])
+  setCommonHeaders(),
+  ({ ctx }) => {
+    // setup ctx here
+    ctx
+  },
+  render(Document, [index([() => {
+    // TODO: uncomment this and its related code to see if rwsdk is working
+    // const is_mounted = useMounted()
+
+    return (
+      <>
+        <p>{get_date_time_now_with_seconds()}</p>
+
+        {/*
+
+        React.useState is not a function or its return value is not iterable
+        at async ProxyServer.fetch
+
+        */}
+        {/* <p>{is_mounted ? "mounted" : "not mounted"}</p>
+        {is_mounted && (
+          <a href={location.href}>Refresh</a>
+        )} */}
+      </>
+    )
+  }])]),
+]);

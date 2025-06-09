@@ -8,7 +8,8 @@
       ],
       "outputs": [
         "dist/**"
-      ]
+      ],
+      "cache": false
     },
     "dev": {
       "dependsOn": [

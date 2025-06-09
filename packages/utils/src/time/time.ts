@@ -47,7 +47,7 @@ export const get_date_format = (from: { date: string; time: string; timezone?: T
 
 export const get_date_date_now = (): string => format(new Date(), "yyyy-MM-dd")
 export const get_date_time_now = (): string => format(new Date(), "HH:mm")
-
+export const get_date_time_now_with_seconds = (): string => format(new Date(), "HH:mm:ss")
 export const validate_date_date = (date: string): boolean => {
 	if (!date || typeof date !== "string") return false
 	const parts = date.split("-")

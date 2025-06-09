@@ -9,12 +9,19 @@
   ],
   "include": [
     "vite.config.mts",
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "references": [
     {
       "path": "../../packages/utils"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "types": [
+      "./types/worker.d.ts",
+      "./types/rw.d.ts",
+      "./types/vite.d.ts"
+    ],
+  }
 }
