@@ -17,3 +17,4 @@ alwaysApply: true
 ## Exports & Types
 - `tools/tsconfig/*.json` – compile settings
 - `packages/**/package.json` – exports + task scripts
+

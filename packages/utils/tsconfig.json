@@ -8,7 +8,7 @@
     "node_modules"
   ],
   "include": [
-    "**/*.ts"
+    "src/index.ts"
   ],
   "compilerOptions": {
     "isolatedDeclarations": false

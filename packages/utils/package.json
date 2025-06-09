@@ -3,8 +3,9 @@
   "name": "@mono/utils",
   "type": "module",
   "scripts": {
+    "dev": "tsc -p tsconfig.json --watch & tsc -p tsconfig.build.json --watch",
     "build": "tsc -p tsconfig.build.json",
-    "dev": "tsc -p tsconfig.json --watch & tsc -p tsconfig.build.json --watch"
+    "tsc": "tsc -p tsconfig.build.json"
   },
   "devDependencies": {
     "@types/geojson": "^7946.0.16",

@@ -21,7 +21,7 @@ export default defineApp([
   render(Document, [index([() => {
     // TODO: uncomment this and its related code to see if rwsdk is working
     // const is_mounted = useMounted()
-
+    get_date_time_now_with_seconds()
     return (
       <>
         <p>{get_date_time_now_with_seconds()}</p>

@@ -6,21 +6,22 @@
     "bun": ">=1.2.15 <2"
   },
   "scripts": {
-    "dev": "bun i && turbo dev",
     "gen": "bun run tools/script-bun/src/gen.ts",
+    "dev": "bun i && turbo dev",
     "build": "bun i && turbo build",
-    "lint": "turbo lint",
+    "lint": "bun i && turbo lint",
     "check": "bun tsrefs && bun tsc",
     "tsrefs": "bun run tools/script-bun/src/update-ts-references.ts --ignoreReferencePaths ./tsconfig.build.json",
-    "tsc": "tsc -b --incremental",
+    "tsc": "bun tsrefs && tsc -b --incremental",
     "tsc:dry": "tsc -b --incremental --dry",
+    "bench": "bun run tools/script-bun/src/bench.ts --watch",
     "build:bunup": "bunup --config ./tools/bunup/bunup.config.ts && bun check",
     "reinstall": "bun run tools/script-bun/src/delete-tmp-files-dirs.ts . && bun pm cache rm && bun i",
     "test:dev": "bun i && turbo dev --filter=!@mono/redwood-sdk",
     "test:build": "bun i && turbo build --filter=!@mono/redwood-sdk",
     "test:lint": "bun i && turbo lint --filter=!@mono/redwood-sdk",
     "test:check": "bun i && turbo check --filter=!@mono/redwood-sdk",
-    "test:tsc": "bun i && turbo tsc --filter=!@mono/redwood-sdk"
+    "test:tsc": "bun i && turbo tsc --filter=!@mono/redwood-sdk",
   },
   "workspaces": {
     "packages": [
