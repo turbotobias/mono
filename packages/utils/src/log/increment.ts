@@ -12,8 +12,8 @@
  * ```
  */
 
-import { get_number_rounded_with_1_decimals, get_number_rounded_with_2_decimals } from "../get"
 import { TimedCache } from "../side-effect/cache"
+import { get_number_rounded_with_1_decimals, get_number_rounded_with_2_decimals } from "../transform"
 
 
 /** log message type */

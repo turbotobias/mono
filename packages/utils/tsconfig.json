@@ -4,10 +4,11 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     ".turbo",
+    "dist",
     "node_modules"
   ],
   "include": [
-    "./index.ts"
+    "**/*.ts"
   ],
   "compilerOptions": {
     "isolatedDeclarations": false

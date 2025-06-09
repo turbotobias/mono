@@ -9,8 +9,8 @@
   ],
   "include": [
     "vite.config.mts",
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "references": [
     {

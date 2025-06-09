@@ -1,5 +1,5 @@
-import { get_template_strings } from "../get/string"
 import { json } from "../log/json"
+import { get_template_strings } from "../transform"
 import { Err } from "../type/helpers"
 
 export const return_error = (error: unknown, message: string): any => {

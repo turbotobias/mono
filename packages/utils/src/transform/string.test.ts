@@ -10,6 +10,7 @@ import {
 	get_safe_string,
 	slugify,
 } from "./string"
+
 test("get_safe_string", () => {
 	expect(get_safe_string("hello_world")).toBe("hello_world")
 	expect(get_safe_string("hello-world")).toBe("hello-world")

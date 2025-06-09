@@ -1,12 +1,9 @@
 {
   "version": "0.0.0",
-  "name": "@mono/scripts",
+  "name": "@mono/script-bun",
   "type": "module",
   "main": "./src/index.ts",
-  "scripts": {
-    "dev": "tsc -p ./tsconfig.json --watch",
-    "build": "tsc -p ./tsconfig.json"
-  },
+  "types": "./src/index.ts",
   "dependencies": {
     "@types/bun": "catalog:",
     "@mono/utils": "workspace:*",

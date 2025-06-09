@@ -1,7 +1,7 @@
 import { get_date, get_date_date_now, get_date_format, get_date_time_now, validate_date_date } from "./time"
 
 import { expect, test } from "bun:test"
-import { get_number_rounded_with_2_decimals } from "../parse/string"
+import { get_number_rounded_with_2_decimals } from "../transform"
 import { validate_date_time } from "./time"
 
 test("validate_date_time", () => {

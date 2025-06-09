@@ -2,13 +2,6 @@
   "version": "0.0.0",
   "name": "@mono/utils",
   "type": "module",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
-  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "dev": "tsc -p tsconfig.json --watch"
@@ -18,5 +11,72 @@
     "geojson": "^0.5.0",
     "countries-and-timezones": "^3.8.0",
     "date-fns": "4.1.0"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./browser": {
+      "types": "./dist/browser.d.ts",
+      "default": "./dist/browser.js"
+    },
+    "./create": {
+      "types": "./dist/create.d.ts",
+      "default": "./dist/create.js"
+    },
+    "./error": {
+      "types": "./dist/error.d.ts",
+      "default": "./dist/error.js"
+    },
+    "./file": {
+      "types": "./dist/file.d.ts",
+      "default": "./dist/file.js"
+    },
+    "./geo": {
+      "types": "./dist/geo.d.ts",
+      "default": "./dist/geo.js"
+    },
+    "./get": {
+      "types": "./dist/get.d.ts",
+      "default": "./dist/get.js"
+    },
+    "./handle": {
+      "types": "./dist/handle.d.ts",
+      "default": "./dist/handle.js"
+    },
+    "./lib-geojson": {
+      "types": "./dist/lib-geojson.d.ts",
+      "default": "./dist/lib-geojson.js"
+    },
+    "./log": {
+      "types": "./dist/log.d.ts",
+      "default": "./dist/log.js"
+    },
+    "./side-effect": {
+      "types": "./dist/side-effect.d.ts",
+      "default": "./dist/side-effect.js"
+    },
+    "./sniff": {
+      "types": "./dist/sniff.d.ts",
+      "default": "./dist/sniff.js"
+    },
+    "./time": {
+      "types": "./dist/time.d.ts",
+      "default": "./dist/time.js"
+    },
+    "./transport": {
+      "types": "./dist/transport.d.ts",
+      "default": "./dist/transport.js"
+    },
+    "./type": {
+      "types": "./dist/type.d.ts",
+      "default": "./dist/type.js"
+    },
+    "./validate": {
+      "types": "./dist/validate.d.ts",
+      "default": "./dist/validate.js"
+    }
   }
 }

@@ -68,6 +68,8 @@
     "/packages/utils/src/transport",
     "/packages/utils/src/type",
     "/packages/utils/src/validate",
-    "/packages/utils/src"
+    "/packages/utils/src",
+    "/packages/utils/src/web",
+    "/packages/utils/src/web-browser"
   ]
 }

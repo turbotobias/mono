@@ -1,7 +1,18 @@
 {
   "extends": "./tools/tsconfig/base.json",
   "files": [],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".wrangler",
+    ".turbo",
+    "*.tsbuildinfo",
+    "templates"
+  ],
   "references": [
+    {
+      "path": "tools/test-browser"
+    },
     {
       "path": "tools/script-bun"
     },
@@ -9,13 +20,11 @@
       "path": "tools/bunup"
     },
     {
-      "path": "apps/redwood-sdk"
-    },
-    {
       "path": "apps/app"
     },
     {
       "path": "packages/utils"
     }
-  ]
+  ],
+  "compilerOptions": {}
 }

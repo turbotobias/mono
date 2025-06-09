@@ -1,7 +1,7 @@
-export * from './browser';
 export * from './create';
 export * from './error';
-export * from './get';
+export * from './file';
+export * from './generate';
 export * from './handle';
 export * from './lib-geojson';
 export * from './log';
@@ -12,3 +12,6 @@ export * from './transform';
 export * from './transport';
 export * from './type';
 export * from './validate';
+export * from './web';
+export * from './web-browser';
+

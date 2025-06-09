@@ -10,8 +10,9 @@
     "gen": "bun run tools/script-bun/src/gen.ts",
     "build": "bun i && turbo build",
     "lint": "turbo lint",
-    "check": "bun run tools/script-bun/src/update-ts-references.ts --ignoreReferencePaths ./tsconfig.build.json && bun tsc -b --noEmit",
-    "tsc": "tsc -b --incremental",
+    "check": "bun run tools/script-bun/src/update-ts-references.ts --ignoreReferencePaths ./tsconfig.build.json && bun tsc -b",
+    "tsc": "tsc -b --incremental --extendedDiagnostics",
+    "tsc:dry": "tsc -b --incremental --extendedDiagnostics --dry",
     "build:bunup": "bunup --config ./tools/bunup/bunup.config.ts && bun check",
     "reinstall": "bun run tools/script-bun/src/delete-tmp-files-dirs.ts . && bun pm cache rm && bun i",
     "test:dev": "bun i && turbo dev --filter=!@mono/redwood-sdk",
@@ -33,7 +34,7 @@
       "typescript": "^5.8.3",
       "vite": "^6.3.5",
       "wrangler": "^4.19.1",
-      "rwsdk": "^0.1.0-alpha.3"
+      "rwsdk": "^0.1.0-alpha.4"
     }
   },
   "dependencies": {
