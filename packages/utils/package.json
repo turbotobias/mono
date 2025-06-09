@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "dev": "tsc -p tsconfig.json --watch"
+    "dev": "tsc -p tsconfig.json --watch & tsc -p tsconfig.build.json --watch"
   },
   "devDependencies": {
     "@types/geojson": "^7946.0.16",

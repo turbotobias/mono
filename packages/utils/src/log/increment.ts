@@ -26,7 +26,7 @@ interface ILogger extends TConsoleMethod {
 	/** singleton logger with cache persistence across all consumers */
 	inc: (message: string, type?: TConsoleMethodType) => void
 	/** creates new logger instance starting from 0 */
-	inc_new: (prefix?: string) => (message: string, type?: TConsoleMethodType) => void
+	inc_new: (prefix?: string) => (message: string, type?: TConsoleMethodType) => (void | 0)
 }
 
 export const log: ILogger = (() => {
